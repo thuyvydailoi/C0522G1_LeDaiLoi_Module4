@@ -12,8 +12,8 @@ public class ConvertController {
     @Autowired
     private IConvertService iConvertService;
 
-    @GetMapping("/list")
-    public String convert(){
+    @GetMapping("/")
+    public String dictionary(){
         return "/list";
     }
 

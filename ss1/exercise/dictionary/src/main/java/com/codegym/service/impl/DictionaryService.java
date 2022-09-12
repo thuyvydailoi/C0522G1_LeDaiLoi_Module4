@@ -12,7 +12,7 @@ public class DictionaryService implements IDictionaryService {
     @Autowired
     IDictionaryRepository iDictionaryRepository;
     @Override
-    public String Distionary(String english) {
+    public String distionary(String english) {
         return iDictionaryRepository.translate(english);
     }
 }

@@ -15,13 +15,13 @@ public class DictionaryController {
     private IDictionaryService iDictionaryService;
 
     @GetMapping("/")
-    public String dictionary() {
+    public String translate() {
         return "/dictionary";
     }
 
     @GetMapping("dictionary1")
     public String dictionary(@RequestParam String english, Model model) {
-        String translate = iDictionaryService.Distionary(english);
+        String translate = iDictionaryService.distionary(english);
         if(translate != null){
             model.addAttribute("translate", translate);
         } else {
