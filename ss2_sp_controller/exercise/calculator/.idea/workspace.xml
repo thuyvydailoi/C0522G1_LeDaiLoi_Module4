@@ -5,62 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fe3ab54-aef6-4ad6-8904-5d56e06a7b47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/controller/CalculatorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/ICalculatorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/impl/CalculatorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/calculator.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../display_sandwich/src/main/java/com/codegym/controller/SandwichController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../display_sandwich/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../display_sandwich/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../display_sandwich/src/main/webapp/WEB-INF/views/display.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../display_sandwich/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/email-validate-maven/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring_greeting/src/main/java/com/codegym/controller/GreetingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring_greeting/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring_greeting/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring_greeting/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/spring_greeting/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1/exercise/convert/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1/exercise/convert/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1/exercise/convert/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1/exercise/convert/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1/exercise/convert/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/build/classes/java/main/com/codegym/controller/ConvertController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1/exercise/convert/build/classes/java/main/com/codegym/controller/ConvertController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/build/classes/java/main/com/codegym/repository/impl/ConvertRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/build/classes/java/main/com/codegym/repository/impl/IConvertRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/build/libs/convert-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1/exercise/convert/build/libs/convert-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1/exercise/convert/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/src/main/java/com/codegym/controller/ConvertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1/exercise/convert/src/main/java/com/codegym/controller/ConvertController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/src/main/java/com/codegym/repository/IConvertRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/src/main/java/com/codegym/repository/impl/ConvertRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/build/classes/java/main/com/codegym/controller/DictionaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/build/classes/java/main/com/codegym/controller/DictionaryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/build/classes/java/main/com/codegym/service/IDictionaryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/build/classes/java/main/com/codegym/service/IDictionaryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/build/classes/java/main/com/codegym/service/impl/DictionaryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/build/classes/java/main/com/codegym/service/impl/DictionaryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/build/libs/dictionary-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/build/libs/dictionary-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/src/main/java/com/codegym/controller/DictionaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/src/main/java/com/codegym/controller/DictionaryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/src/main/java/com/codegym/service/IDictionaryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/src/main/java/com/codegym/service/IDictionaryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/src/main/java/com/codegym/service/impl/DictionaryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/src/main/java/com/codegym/service/impl/DictionaryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss1/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1/practice/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/customer-management" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +64,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../practice/customer-management" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -233,6 +179,7 @@
       <workItem from="1662964587178" duration="2924000" />
       <workItem from="1662967664957" duration="17000" />
       <workItem from="1662968088149" duration="150000" />
+      <workItem from="1662971758366" duration="730000" />
     </task>
     <servers />
   </component>

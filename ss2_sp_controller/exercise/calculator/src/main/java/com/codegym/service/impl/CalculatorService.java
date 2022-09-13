@@ -6,8 +6,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CalculatorService implements ICalculatorService {
-    @Autowired
-    ICalculatorService iCalculatorService;
 
     @Override
     public String result(String firstNumber, String secondNumber, String calculator) {

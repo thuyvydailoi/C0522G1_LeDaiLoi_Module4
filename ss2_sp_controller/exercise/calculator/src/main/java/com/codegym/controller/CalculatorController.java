@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class CalculatorController {
 
     @Autowired
-    ICalculatorService iCalculatorService;
+    private ICalculatorService iCalculatorService;
 
     @RequestMapping("/")
     public String display() {
@@ -25,7 +25,7 @@ public class CalculatorController {
                        @RequestParam String secondNumber,
                        Model model
     ) {
-        String result= iCalculatorService.result(firstNumber, secondNumber, string);
+        String result = iCalculatorService.result(firstNumber, secondNumber, string);
         model.addAttribute("result", result);
         model.addAttribute("firstNumber", firstNumber);
         model.addAttribute("secondNumber", secondNumber);
