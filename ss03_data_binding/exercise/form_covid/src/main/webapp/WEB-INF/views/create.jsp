@@ -2,10 +2,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Tờ khai y tế</title>
+    <link rel="shortcut icon"
+          href="https://tokhaiyte.vn/upload/2001432/Image/logoboyte.png">
+    <title>Thêm tờ khai y tế</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <style>
+        body{
+            background-image: url("https://salt.tikicdn.com/ts/product/64/93/6f/c8053c849a71a0e69c43d937d99666e3.jpg");
+            font-family: Arial, sans-serif
+        }
+    </style>
 </head>
 <body>
 <div class="container-fluid">
@@ -24,7 +31,7 @@
 
 <div class="container-fluid mt-5">
 
-    <form:form modelAttribute="createMedical" method="post" action="/create">
+    <form:form modelAttribute="createDeclaration" method="post" action="/create">
         <div class="row mt-2">
             <div class="col-lg-12">
                 <label class="fw-bold">Họ tên (ghi chữ IN HOA) </label>
@@ -37,7 +44,7 @@
             <div class="col-lg-4">
                 <label class="fw-bold">Năm sinh </label>
                 <label class="text-danger">(*)</label>
-                <form:select path="birthday" items="${birthdayList}" cssClass="form-select" required="true"/>
+                <form:select path="dateOfBirth" items="${dateOfBirthList}" cssClass="form-select" required="true"/>
             </div>
             <div class="col-lg-4">
                 <label class="fw-bold">Giới tính </label>
@@ -47,7 +54,7 @@
             <div class="col-lg-4">
                 <label class="fw-bold">Quốc tịch </label>
                 <label class="text-danger">(*)</label>
-                <form:select path="country" items="${countryList}" cssClass="form-select" required="true"/>
+                <form:select path="nationality" items="${natronalityList}" cssClass="form-select" required="true"/>
             </div>
         </div>
 
@@ -88,13 +95,13 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
-                        <form:select path="starDay" items="${starDayList}" cssClass="form-select" required="true"/>
+                        <form:select path="startDay" items="${startDayList}" cssClass="form-select" required="true"/>
                     </div>
                     <div class="col-lg-4">
-                        <form:select path="starMonth" items="${starMonthList}" cssClass="form-select" required="true"/>
+                        <form:select path="startMonth" items="${startMonthList}" cssClass="form-select" required="true"/>
                     </div>
                     <div class="col-lg-4">
-                        <form:select path="starYear" items="${starYearList}" cssClass="form-select" required="true"/>
+                        <form:select path="startYear" items="${startYearList}" cssClass="form-select" required="true"/>
                     </div>
                 </div>
             </div>
@@ -139,8 +146,11 @@
         <div class="row mt-2">
             <div class="col-lg-12 text-center">
                 <form:button class="btn btn-success">
-                    Tạo mới
+                    Gửi tờ khai
                 </form:button>
+                <a class="btn btn-success" href="/" role="button">
+                    Hủy
+                </a>
             </div>
         </div>
     </form:form>

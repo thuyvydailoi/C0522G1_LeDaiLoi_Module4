@@ -5,8 +5,9 @@ public class Declaration {
     private String dateOfBirth;
     private String gender;
     private String nationality;
-    private String id;
     private String identity;
+    private String vehicleNumber;
+    private String render;
     private String seats;
     private Integer startDay;
     private Integer startMonth;
@@ -19,13 +20,14 @@ public class Declaration {
     public Declaration() {
     }
 
-    public Declaration(String name, String dateOfBirth, String gender, String nationality, String id, String identity, String seats, Integer startDay, Integer startMonth, Integer startYear, Integer endDay, Integer endMonth, Integer endYear, String information) {
+    public Declaration(String name, String dateOfBirth, String gender, String nationality, String identity, String vehicleNumber, String render, String seats, Integer startDay, Integer startMonth, Integer startYear, Integer endDay, Integer endMonth, Integer endYear, String information) {
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.gender = gender;
         this.nationality = nationality;
-        this.id = id;
         this.identity = identity;
+        this.vehicleNumber = vehicleNumber;
+        this.render = render;
         this.seats = seats;
         this.startDay = startDay;
         this.startMonth = startMonth;
@@ -68,20 +70,28 @@ public class Declaration {
         this.nationality = nationality;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public String getIdentity() {
         return identity;
     }
 
     public void setIdentity(String identity) {
         this.identity = identity;
+    }
+
+    public String getVehicleNumber() {
+        return vehicleNumber;
+    }
+
+    public void setVehicleNumber(String vehicleNumber) {
+        this.vehicleNumber = vehicleNumber;
+    }
+
+    public String getRender() {
+        return render;
+    }
+
+    public void setRender(String render) {
+        this.render = render;
     }
 
     public String getSeats() {
