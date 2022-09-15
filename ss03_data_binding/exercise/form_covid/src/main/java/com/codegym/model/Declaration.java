@@ -20,7 +20,9 @@ public class Declaration {
     public Declaration() {
     }
 
-    public Declaration(String name, String dateOfBirth, String gender, String nationality, String identity, String vehicleNumber, String render, String seats, Integer startDay, Integer startMonth, Integer startYear, Integer endDay, Integer endMonth, Integer endYear, String information) {
+    public Declaration(String name, String dateOfBirth, String gender, String nationality, String identity, String vehicleNumber,
+                       String render, String seats, Integer startDay, Integer startMonth, Integer startYear, Integer endDay,
+                       Integer endMonth, Integer endYear, String information) {
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.gender = gender;

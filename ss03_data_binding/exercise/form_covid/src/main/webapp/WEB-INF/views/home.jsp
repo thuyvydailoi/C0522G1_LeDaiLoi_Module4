@@ -37,7 +37,7 @@
 </head>
 <body>
 <h2 class="text-center" style="transform: translateY(40%)">DANH SÁCH TỜ KHAI Y TẾ</h2>
-<a href="/show-create">
+<a href="/show_create">
     <button class="btn btn-info">
         Thêm mới
     </button>

@@ -1,7 +1,6 @@
 package com.codegym.controller;
 
 import com.codegym.model.Product;
-import com.codegym.repository.IProductRepository;
 import com.codegym.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,14 +14,12 @@ import java.util.List;
 @RequestMapping("/product")
 public class ProductController {
     @Autowired
-    private IProductRepository iProductRepository;
-    @Autowired
     private IProductService iProductService;
 
     @GetMapping("/list")
     public String index(Model model) {
 
-        List<Product> productList = iProductRepository.findAll();
+        List<Product> productList = iProductService.findAll();
         model.addAttribute("products", productList);
         return "/index";
     }
@@ -36,38 +33,38 @@ public class ProductController {
     @PostMapping("/save")
     public String save(Product product) {
         product.setId((int) (Math.random() * 10000));
-        iProductRepository.save(product);
+        iProductService.save(product);
         return "redirect:/product/list";
     }
 
     @GetMapping("/{id}/edit")
     public String edit(@PathVariable int id, Model model) {
-        model.addAttribute("product", iProductRepository.findById(id));
+        model.addAttribute("product", iProductService.findById(id));
         return "/edit";
     }
 
     @PostMapping("/update")
     public String update(Product product) {
-        iProductRepository.update(product.getId(), product);
+        iProductService.update(product);
         return "redirect:/product";
     }
 
     @GetMapping("/{id}/delete")
     public String showDelete(@PathVariable int id, Model model) {
-        model.addAttribute("product", iProductRepository.findById(id));
+        model.addAttribute("product", iProductService.findById(id));
         return "/delete";
     }
 
     @PostMapping("/delete")
     public String delete(Product product, RedirectAttributes redirect) {
-        iProductRepository.remove(product.getId());
+        iProductService.remove(product.getId());
         redirect.addFlashAttribute("success", "Removed customer successfully!");
         return "redirect:/product";
     }
 
     @GetMapping("/{id}/view")
     public String view(@PathVariable int id, Model model) {
-        model.addAttribute("product", iProductRepository.findById(id));
+        model.addAttribute("product", iProductService.findById(id));
         return "/view";
     }
 

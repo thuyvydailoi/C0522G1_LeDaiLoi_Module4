@@ -18,6 +18,7 @@ public interface IDeclarationRepository {
     List<Declaration> findAll();
 
     Declaration findOne(String identity);
+
     void update(String identity, Declaration declaration);
 
     void save(Declaration declaration);

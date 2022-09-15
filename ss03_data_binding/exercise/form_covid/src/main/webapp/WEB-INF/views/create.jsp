@@ -15,7 +15,7 @@
     </style>
 </head>
 <body>
-<div class="container-fluid">
+    <div class="container-fluid">
     <div class="row text-center mt-5">
         <h2>TỜ KHAI Y TẾ</h2>
     </div>
@@ -31,7 +31,7 @@
 
 <div class="container-fluid mt-5">
 
-    <form:form modelAttribute="createDeclaration" method="post" action="/create">
+    <form:form modelAttribute="createDeclaration" method="post" action="/show_create">
         <div class="row mt-2">
             <div class="col-lg-12">
                 <label class="fw-bold">Họ tên (ghi chữ IN HOA) </label>
