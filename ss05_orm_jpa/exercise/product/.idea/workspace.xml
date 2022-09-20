@@ -5,400 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="642907a1-f922-4c15-a61e-945122dbde11" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../music/src/main/java/com/codegym/config/FilterUTF8.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../music/src/main/java/com/codegym/controller/MusicController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../music/src/main/java/com/codegym/model/Music.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../music/src/main/java/com/codegym/repository/IMusicrepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../music/src/main/java/com/codegym/repository/impl/ConnectionUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../music/src/main/java/com/codegym/repository/impl/MusicRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../music/src/main/java/com/codegym/service/IMusicService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../music/src/main/java/com/codegym/service/impl/MusicService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../music/src/main/resources/hibernate.conf.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../music/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../music/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../music/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../music/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../music/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../music/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../music/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../music/src/main/webapp/WEB-INF/views/view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../music/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/repository/impl/ConnectionUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.conf.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss03_data_binding/exercise/form_covid/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss03_data_binding/exercise/form_covid/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss03_data_binding/exercise/form_covid/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss03_data_binding/exercise/form_covid/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss03_data_binding/exercise/form_covid/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss03_data_binding/exercise/form_covid/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss03_data_binding/exercise/form_covid/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss03_data_binding/exercise/form_covid/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss03_data_binding/exercise/form_covid/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss03_data_binding/exercise/form_covid/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss03_data_binding/exercise/form_covid/build/classes/java/main/com/codegym/model/Declaration.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss03_data_binding/exercise/form_covid/build/classes/java/main/com/codegym/model/Declaration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss03_data_binding/exercise/form_covid/build/libs/form_covid-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss03_data_binding/exercise/form_covid/build/libs/form_covid-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss03_data_binding/exercise/form_covid/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss03_data_binding/exercise/form_covid/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss03_data_binding/exercise/form_covid/src/main/java/com/codegym/model/Declaration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss03_data_binding/exercise/form_covid/src/main/java/com/codegym/model/Declaration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss03_data_binding/exercise/form_covid/src/main/java/com/codegym/repository/IDeclarationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss03_data_binding/exercise/form_covid/src/main/java/com/codegym/repository/IDeclarationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss03_data_binding/exercise/form_covid/src/main/webapp/WEB-INF/views/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss03_data_binding/exercise/form_covid/src/main/webapp/WEB-INF/views/create.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss03_data_binding/exercise/form_covid/src/main/webapp/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss03_data_binding/exercise/form_covid/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/build/classes/java/main/com/codegym/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/build/classes/java/main/com/codegym/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/build/classes/java/main/com/codegym/repository/IProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/build/classes/java/main/com/codegym/repository/IProductRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/build/classes/java/main/com/codegym/repository/impl/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/build/classes/java/main/com/codegym/repository/impl/ProductRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/build/classes/java/main/com/codegym/service/IProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/build/classes/java/main/com/codegym/service/IProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/build/classes/java/main/com/codegym/service/impl/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/build/classes/java/main/com/codegym/service/impl/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/build/libs/product-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/build/libs/product-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/src/main/java/com/codegym/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/src/main/java/com/codegym/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/src/main/java/com/codegym/repository/IProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/src/main/java/com/codegym/repository/IProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/src/main/java/com/codegym/repository/impl/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/src/main/java/com/codegym/repository/impl/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/src/main/java/com/codegym/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/src/main/java/com/codegym/service/IProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/src/main/java/com/codegym/service/impl/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/src/main/java/com/codegym/service/impl/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/src/main/webapp/WEB-INF/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/src/main/webapp/WEB-INF/views/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss04_view_thymleaf/exercise/product/src/main/webapp/WEB-INF/views/view.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.gradle/7.1/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.gradle/7.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.gradle/7.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/build/classes/java/main/com/codegym/controller/ConvertController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/build/classes/java/main/com/codegym/model/Convert.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/build/classes/java/main/com/codegym/service/IConvertService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/build/classes/java/main/com/codegym/service/impl/ConvertService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/build/libs/convert-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/build/tmp/war/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/src/main/java/com/codegym/controller/ConvertController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/src/main/java/com/codegym/model/Convert.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/src/main/java/com/codegym/service/IConvertService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/src/main/java/com/codegym/service/impl/ConvertService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/src/main/webapp/WEB-INF/views/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/convert/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.gradle/7.1/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.gradle/7.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.gradle/7.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/build/classes/java/main/com/codegym/controller/DictionaryController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/build/classes/java/main/com/codegym/model/Dictionary.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/build/classes/java/main/com/codegym/repository/IDictionaryRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/build/classes/java/main/com/codegym/repository/impl/DictionaryRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/build/classes/java/main/com/codegym/service/IDictionaryService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/build/classes/java/main/com/codegym/service/impl/DictionaryService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/build/libs/dictionary-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/build/tmp/war/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/src/main/java/com/codegym/controller/DictionaryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/src/main/java/com/codegym/model/Dictionary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/src/main/java/com/codegym/repository/IDictionaryRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/src/main/java/com/codegym/repository/impl/DictionaryRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/src/main/java/com/codegym/service/IDictionaryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/src/main/java/com/codegym/service/impl/DictionaryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/src/main/webapp/WEB-INF/views/dictionary.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/dictionary/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/untitled/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/untitled/.gradle/7.1/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/untitled/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/untitled/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/untitled/.gradle/7.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/untitled/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/untitled/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/untitled/.gradle/7.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/untitled/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/untitled/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/untitled/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/untitled/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/untitled/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/untitled/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/untitled/build/tmp/war/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/untitled/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/untitled/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/untitled/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/untitled/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/untitled/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/exercise/untitled/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/.gradle/7.1/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/.gradle/7.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/.gradle/7.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/.idea/modules/SpringGreeting.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/build/classes/java/main/com/code/controller/GreetingController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/build/libs/SpringGreeting-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/build/tmp/war/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/src/main/java/com/code/controller/GreetingController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/SpringGreeting/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/customer-management" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/dddd.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/.gradle/7.1/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/.gradle/7.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/.gradle/7.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/build/classes/java/main/com/example/AppConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/build/classes/java/main/com/example/AppInitializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/build/classes/java/main/com/example/controller/GreetingController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/build/libs/practice-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/build/tmp/war/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/src/main/java/com/example/AppConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/src/main/java/com/example/AppInitializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/src/main/java/com/example/controller/GreetingController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/simpl/src/main/webapp/WEB-INF/views/greeting.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/.gradle/7.1/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/.gradle/7.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/.gradle/7.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/build/classes/java/main/com/example/controller/GreetingController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/build/libs/spring-gradle-xml-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/build/tmp/war/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/src/main/java/com/example/controller/GreetingController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/src/main/webapp/WEB-INF/views/greeting.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss1/practice/spring-gradle-xml/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/.gradle/7.1/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/.gradle/7.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/.gradle/7.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/build/classes/java/main/com/codegym/controller/CalculatorController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/build/classes/java/main/com/codegym/service/ICalculatorService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/build/classes/java/main/com/codegym/service/impl/CalculatorService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/build/libs/calculator-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/build/tmp/war/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/src/main/java/com/codegym/controller/CalculatorController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/src/main/java/com/codegym/service/ICalculatorService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/src/main/java/com/codegym/service/impl/CalculatorService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/src/main/webapp/WEB-INF/views/calculator.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/calculator/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/.gradle/7.1/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/.gradle/7.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/.gradle/7.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/build/classes/java/main/com/codegym/controller/SandwichController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/build/libs/display_sandwich-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/build/tmp/war/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/src/main/java/com/codegym/controller/SandwichController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/src/main/webapp/WEB-INF/views/display.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/exercise/display_sandwich/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/customer-management" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/email-validate-maven/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/.gradle/7.1/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/.gradle/7.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/.gradle/7.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/build/classes/java/main/com/codegym/controller/GreetingController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/build/libs/spring_greeting-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/build/tmp/war/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/src/main/java/com/codegym/controller/GreetingController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss2_sp_controller/practice/spring_greeting/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog1/src/main/java/com/codegym/controller/BlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog1/src/main/java/com/codegym/model/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog1/src/main/java/com/codegym/repository/IBlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog1/src/main/java/com/codegym/service/IBlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog1/src/main/java/com/codegym/service/impl/BlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog1/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog1/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog1/src/main/resources/templates/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog1/src/main/resources/templates/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog1/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog1/src/main/resources/templates/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog1/src/main/resources/templates/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/product/src/main/java/com/codegym/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/product/src/main/java/com/codegym/repository/IProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/product/src/main/java/com/codegym/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/product/src/main/java/com/codegym/service/impl/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/product/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss01_spring_over_view/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss01_spring_over_view/practice/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss02_sp_controller/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss02_sp_controller/practice/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../music/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../music/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/customer-management" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -464,7 +93,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -589,6 +218,10 @@
       <workItem from="1663236411329" duration="727000" />
       <workItem from="1663237266342" duration="13000" />
       <workItem from="1663248125624" duration="789000" />
+      <workItem from="1663290075601" duration="1075000" />
+      <workItem from="1663301940759" duration="63000" />
+      <workItem from="1663310156210" duration="1519000" />
+      <workItem from="1663315647296" duration="688000" />
     </task>
     <servers />
   </component>

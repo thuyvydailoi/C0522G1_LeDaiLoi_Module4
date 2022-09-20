@@ -5,35 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a600b84-7638-48ea-9834-2259791c3e25" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/BlogApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/controller/BlogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/controller/CategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/model/Blog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/model/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/repository/IBlogRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/repository/ICategoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/IBlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/ICategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/impl/BlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/impl/CategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/blog/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/blog/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/blog/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/blog/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/blog/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/blog/view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/category/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/category/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/category/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/category/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/category/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/category/view.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss01_spring_over_view/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss01_spring_over_view/practice/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss02_sp_controller/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss02_sp_controller/practice/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss05_orm_jpa/exercise/music/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss05_orm_jpa/exercise/music/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss05_orm_jpa/exercise/product/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss05_orm_jpa/exercise/product/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss05_orm_jpa/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss05_orm_jpa/practice/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/model/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/model/Blog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/model/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/repository/IBlogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/repository/IBlogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/repository/ICategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/repository/ICategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/service/IBlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/IBlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/service/ICategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/ICategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/service/impl/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/impl/BlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/service/impl/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/impl/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blog/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blog/delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blog/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blog/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blog/view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/category/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/category/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/category/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/category/delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/category/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/category/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/category/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/category/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/category/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/category/view.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +125,8 @@
       <updated>1663560859676</updated>
       <workItem from="1663560862416" duration="8079000" />
       <workItem from="1663574444941" duration="3850000" />
+      <workItem from="1663637459166" duration="8527000" />
+      <workItem from="1663654933971" duration="831000" />
     </task>
     <servers />
   </component>

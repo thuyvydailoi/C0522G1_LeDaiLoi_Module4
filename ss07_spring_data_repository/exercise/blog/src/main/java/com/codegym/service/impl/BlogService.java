@@ -4,6 +4,8 @@ import com.codegym.model.Blog;
 import com.codegym.repository.IBlogRepository;
 import com.codegym.service.IBlogService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -38,7 +40,17 @@ public class BlogService implements IBlogService {
     }
 
     @Override
-    public void remove(Blog blog) {
-        iBlogRepository.delete(blog);
+    public void remove(int id) {
+        iBlogRepository.deleteById(id);
+    }
+
+    @Override
+    public Page<Blog> findAll(Pageable pageable) {
+        return iBlogRepository.findAll(pageable);
+    }
+
+    @Override
+    public Page<Blog> findAllByBlogNameContaining(String title, Pageable pageable) {
+        return iBlogRepository.findAllByBlogNameContaining(title, pageable);
     }
 }

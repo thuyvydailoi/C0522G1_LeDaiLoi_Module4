@@ -20,30 +20,28 @@ public class CategoryController {
     @Autowired
     private ICategoryService iCategoryService;
 
-    @GetMapping("/list")
+    @GetMapping("")
     public String index(Model model) {
         List<Category> categoryList = iCategoryService.findAll();
         model.addAttribute("categorys", categoryList);
-        return "category/index";
+        return "/category/index";
     }
 
     @GetMapping("/create")
     public String create(Model model) {
-        List<Category> categoryList = iCategoryService.findAll();
-        model.addAttribute("categoryList", categoryList);
-        model.addAttribute("blog", new Blog());
-        return "category/create";
+        model.addAttribute("category", new Category());
+        return "/category/create";
     }
 
     @PostMapping("/save")
     public String save(Category category) {
         iCategoryService.save(category);
-        return "redirect:/category/list";
+        return "redirect:/category";
     }
 
     @GetMapping("/edit/{id}")
     public String edit(@PathVariable int id, Model model) {
-        model.addAttribute("category", iCategoryService.findById(id));
+        model.addAttribute("category", iCategoryService.findByCategoryId(id));
         return "category/edit";
     }
 
@@ -55,20 +53,20 @@ public class CategoryController {
 
     @GetMapping("/delete/{id}")
     public String showDelete(@PathVariable int id, Model model) {
-        model.addAttribute("category", iCategoryService.findById(id));
+        model.addAttribute("category", iCategoryService.findByCategoryId(id));
         return "category/delete";
     }
 
     @PostMapping("/delete")
     public String delete(Category category, RedirectAttributes redirect) {
-        iCategoryService.remove(category);
+        iCategoryService.remove(category.getCategoryId());
         redirect.addFlashAttribute("success", "Removed category successfully!");
         return "redirect:/category";
     }
 
     @GetMapping("/view/{id}")
     public String view(@PathVariable int id, Model model) {
-        model.addAttribute("category", iCategoryService.findById(id));
+        model.addAttribute("category", iCategoryService.findByCategoryId(id));
         return "category/view";
     }
 
