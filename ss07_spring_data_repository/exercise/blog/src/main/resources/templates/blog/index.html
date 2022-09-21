@@ -31,7 +31,7 @@
         <td th:text="${row.blogName}"></td>
         <td th:text="${row.blogType}"></td>
         <td th:text="${row.content}"></td>
-        <td th:text="${row.category}"></td>
+        <td th:if="${row.category}" th:text="${row.category.categoryName}"></td>
         <td><a th:href="@{/blog/edit/__${row.id}__}">edit</a></td>
         <td><a th:href="@{/blog/delete/__${row.id}__}">delete</a></td>
         <td><a th:href="@{/blog/view/__${row.id}__}">view</a></td>

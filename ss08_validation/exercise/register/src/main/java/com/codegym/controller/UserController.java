@@ -1,7 +1,7 @@
 package com.codegym.controller;
 
 import com.codegym.model.User;
-import com.codegym.model.UserDto;
+import com.codegym.dto.UserDto;
 import com.codegym.service.IUserService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;

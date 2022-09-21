@@ -1,12 +1,9 @@
-package com.codegym.model;
+package com.codegym.dto;
 
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
 public class UserDto implements Validator {
     private int id;
@@ -21,9 +18,13 @@ public class UserDto implements Validator {
 
     @Pattern(regexp = "[8][4][0-9]{9}",message = "Số điện thoại có định dạng là 84*********  * là các chữ số từ 0-9")
     private String phoneNumber;
+
+    @NotBlank
     @Min(value = 18, message = "Tuổi phải lớn hơn hoặc bằng 18")
     private String age;
-    @Pattern(regexp = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]{2,}(\\.[A-Za-z0-9]{2,}){1,2}$", message = "email phải đúng định dạng đã quy định")
+
+    @NotBlank
+    @Email(message = "Email chưa đúng định dạng!")
     private String email;
 
     public int getId() {

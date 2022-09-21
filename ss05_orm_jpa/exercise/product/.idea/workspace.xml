@@ -5,29 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="642907a1-f922-4c15-a61e-945122dbde11" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog1/src/main/java/com/codegym/controller/BlogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog1/src/main/java/com/codegym/model/Blog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog1/src/main/java/com/codegym/repository/IBlogRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog1/src/main/java/com/codegym/service/IBlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog1/src/main/java/com/codegym/service/impl/BlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog1/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog1/src/main/resources/templates/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog1/src/main/resources/templates/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog1/src/main/resources/templates/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog1/src/main/resources/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog1/src/main/resources/templates/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog1/src/main/resources/templates/view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/product/src/main/java/com/codegym/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/product/src/main/java/com/codegym/repository/IProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/product/src/main/java/com/codegym/service/IProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/product/src/main/java/com/codegym/service/impl/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/product/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss01_spring_over_view/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss01_spring_over_view/practice/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss02_sp_controller/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss02_sp_controller/practice/customer-management" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../music/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../music/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss07_spring_data_repository/exercise/blog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss07_spring_data_repository/exercise/blog/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +74,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../music" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -222,6 +203,7 @@
       <workItem from="1663301940759" duration="63000" />
       <workItem from="1663310156210" duration="1519000" />
       <workItem from="1663315647296" duration="688000" />
+      <workItem from="1663656910799" duration="26000" />
     </task>
     <servers />
   </component>
