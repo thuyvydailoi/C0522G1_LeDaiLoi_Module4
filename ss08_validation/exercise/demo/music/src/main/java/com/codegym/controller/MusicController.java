@@ -1,7 +1,7 @@
 package com.codegym.controller;
 
 import com.codegym.model.Music;
-import com.codegym.model.MusicDto;
+import com.codegym.dto.MusicDto;
 import com.codegym.service.IMusicService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;

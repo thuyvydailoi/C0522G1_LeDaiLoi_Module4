@@ -1,4 +1,4 @@
-package com.codegym.model;
+package com.codegym.dto;
 
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
