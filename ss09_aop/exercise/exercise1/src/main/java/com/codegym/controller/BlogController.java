@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
-import java.util.Locale;
 
 @Controller
 @RequestMapping("/blog")
@@ -65,11 +64,11 @@ public class BlogController {
         return "redirect:/blog";
     }
 
-    @GetMapping("/view/{id}")
-    public String view(@PathVariable int id, Model model) {
-        model.addAttribute("blog", blogService.findById(id));
-        return "blog/view";
-    }
+        @GetMapping("/view/{id}")
+        public String view(@PathVariable int id, Model model) {
+            model.addAttribute("blog", blogService.findById(id));
+            return "blog/view";
+        }
 
 //    @GetMapping("")
 //    public String showList(@PageableDefault(value = 5, sort = "dateCreate", direction = Sort.Direction.DESC)

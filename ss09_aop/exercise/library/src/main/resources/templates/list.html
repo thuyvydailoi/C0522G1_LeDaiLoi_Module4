@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--<head th:replace="/layout :: head">-->
+
+</head>
+<body>
+<h3>Book</h3>
+<form>
+    <input placeholder="Search by Title..." name="search" type="text"/>
+    <input type="submit" value="Search"/>
+</form>
+<p>
+    <a th:href="@{/book/create}">
+        Add new book
+    </a>
+</p>
+<table id="books">
+    <thead>
+    <tr>
+        <th>Book Name</th>
+        <th>Name Type</th>
+        <th>Amount</th>
+        <th>Borrow</th>
+        <th>Return</th>
+        <th>Total</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="row, rows: ${books}">
+        <td th:text="${row.nameBook}"></td>
+        <td th:text="${row.nameType}"></td>
+        <td th:text="${row.amount}"></td>
+        <td><a th:href="@{/book/borrow/__${row.idBook}__}">Borrow</a></td>
+        <td><a th:href="@{/book/save/__${row.idBook}__}">Return</a></td>
+    </tr>
+    </tbody>
+</table>
+<div>
+    <!--    <a th:href="@{'/blog'(page=${blogs.number - 1}, search=${search})}" th:if="${blogs.hasPrevious()}">Previous</a>-->
+    <!--    <span th:text="${blogs.number + 1}"></span>/<span th:text="${blogs.totalPages}"></span>-->
+    <!--    <a th:href="@{'/blog'(page=${blogs.number + 1}, search=${search})}" th:if="${blogs.hasNext()}">Next</a>-->
+</div>
+<!--<footer th:replace="/layout :: footer"></footer>-->
+</body>
+</html>

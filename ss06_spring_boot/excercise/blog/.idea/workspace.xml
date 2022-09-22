@@ -5,10 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cfc15f4-111e-41f4-a677-afb52ac7714d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../ss09_aop/exercise/library/src/main/java/com/example/controller/BookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss09_aop/exercise/library/src/main/java/com/example/model/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss09_aop/exercise/library/src/main/java/com/example/repository/IBookRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss09_aop/exercise/library/src/main/java/com/example/service/IBookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss09_aop/exercise/library/src/main/java/com/example/service/impl/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss09_aop/exercise/library/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss09_aop/exercise/library/src/main/resources/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study_module4/case/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_module4/case/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/java/com/codegym/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/java/com/codegym/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/java/com/codegym/controller/FacilityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/java/com/codegym/controller/FacilityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/java/com/codegym/dto/CustomerDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/java/com/codegym/dto/CustomerDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/java/com/codegym/repository/ICustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/java/com/codegym/repository/ICustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/java/com/codegym/service/ICustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/java/com/codegym/service/ICustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/java/com/codegym/service/impl/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/java/com/codegym/service/impl/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/resources/templates/customer/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/resources/templates/customer/create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss01_spring_over_view/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss01_spring_over_view/practice/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss02_sp_controller/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss02_sp_controller/practice/customer-management" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss05_orm_jpa/exercise/product/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss05_orm_jpa/exercise/product/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss05_orm_jpa/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss05_orm_jpa/practice/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss07_spring_data_repository/exercise/blog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss07_spring_data_repository/exercise/blog/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss08_validation/exercise/demo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss08_validation/exercise/demo/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss09_aop/exercise/exercise1/src/main/java/com/codegym/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss09_aop/exercise/exercise1/src/main/java/com/codegym/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss09_aop/exercise/exercise1/src/main/java/com/codegym/model/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss09_aop/exercise/exercise1/src/main/java/com/codegym/model/Blog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss09_aop/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss09_aop/practice/customer-management" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +69,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/codegym" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blog1" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -71,6 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1663300114814</updated>
       <workItem from="1663300117645" duration="390000" />
+      <workItem from="1663821887970" duration="9000" />
     </task>
     <servers />
   </component>
@@ -87,5 +108,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

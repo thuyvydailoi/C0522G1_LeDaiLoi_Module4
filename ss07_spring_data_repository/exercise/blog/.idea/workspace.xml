@@ -5,12 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a600b84-7638-48ea-9834-2259791c3e25" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../ss09_aop/exercise/library/src/main/java/com/example/controller/BookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss09_aop/exercise/library/src/main/java/com/example/model/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss09_aop/exercise/library/src/main/java/com/example/repository/IBookRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss09_aop/exercise/library/src/main/java/com/example/service/IBookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss09_aop/exercise/library/src/main/java/com/example/service/impl/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss09_aop/exercise/library/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss09_aop/exercise/library/src/main/resources/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study_module4/case/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_module4/case/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/java/com/codegym/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/java/com/codegym/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/java/com/codegym/controller/FacilityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/java/com/codegym/controller/FacilityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/java/com/codegym/dto/CustomerDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/java/com/codegym/dto/CustomerDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/java/com/codegym/repository/ICustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/java/com/codegym/repository/ICustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/java/com/codegym/service/ICustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/java/com/codegym/service/ICustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/java/com/codegym/service/impl/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/java/com/codegym/service/impl/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/resources/templates/customer/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_module4/case/src/main/resources/templates/customer/create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss01_spring_over_view/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss01_spring_over_view/practice/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss02_sp_controller/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss02_sp_controller/practice/customer-management" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss05_orm_jpa/exercise/product/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss05_orm_jpa/exercise/product/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss05_orm_jpa/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss05_orm_jpa/practice/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blog/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss08_validation/exercise/demo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss08_validation/exercise/demo/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss09_aop/exercise/exercise1/src/main/java/com/codegym/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss09_aop/exercise/exercise1/src/main/java/com/codegym/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss09_aop/exercise/exercise1/src/main/java/com/codegym/model/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss09_aop/exercise/exercise1/src/main/java/com/codegym/model/Blog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss09_aop/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss09_aop/practice/customer-management" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +81,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../ss08_validation/exercise/register" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../ss06_spring_boot/excercise/blog" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -110,6 +128,10 @@
       <workItem from="1663663640222" duration="59000" />
       <workItem from="1663690552316" duration="712000" />
       <workItem from="1663721711585" duration="22000" />
+      <workItem from="1663731025880" duration="1279000" />
+      <workItem from="1663743424749" duration="914000" />
+      <workItem from="1663820975496" duration="280000" />
+      <workItem from="1663821872319" duration="14000" />
     </task>
     <servers />
   </component>
