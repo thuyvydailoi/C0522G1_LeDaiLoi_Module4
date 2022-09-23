@@ -1,4 +1,4 @@
-package com.example.config;
+package com.example.logger;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
