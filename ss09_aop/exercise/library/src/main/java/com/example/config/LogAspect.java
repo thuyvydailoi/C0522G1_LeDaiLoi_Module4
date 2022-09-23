@@ -1,4 +1,4 @@
-package com.example.exceptionhandle;
+package com.example.config;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 public class LogAspect {
     int count = 0;
 
-    @Pointcut("within (com.example.controller.*)")
+    @Pointcut("within (com.example.controller.BookController.*)")
     public void allMethod(){
     }
 

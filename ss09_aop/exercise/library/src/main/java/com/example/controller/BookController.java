@@ -27,7 +27,7 @@ public class BookController {
     }
 
     @GetMapping("/borrow/{id}")
-    public String borrow(@PathVariable int id) {
+    public String getBorrow(@PathVariable int id) {
         Book book = iBookService.findById(id);
         if (book.getAmount() == 0) {
             return "error";
@@ -38,7 +38,7 @@ public class BookController {
     }
 
     @GetMapping("/save/{id}")
-    public String refund(@PathVariable int id) {
+    public String getRefund(@PathVariable int id) {
         Book book = iBookService.findById(id);
         if (book.getAmount() == book.getFirstAmount()) {
             return "error";
