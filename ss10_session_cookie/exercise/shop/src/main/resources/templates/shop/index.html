@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="col-md-8">
+        <table class="table table-striped">
+            <tr>
+                <th>STT</th>
+                <th>Product Name</th>
+                <th>Picture</th>
+                <th>Description</th>
+                <th>Old Price</th>
+                <th>New Price</th>
+                <th>Put In Line</th>
+            </tr>
+
+            <tr th:each="row,rowStat : ${shopList}">
+                <td th:text="${row.id}" hidden></td>
+                <td th:text="${row.name}"></td>
+                <td th:text="${row.code}"></td>
+                <td>
+                    <a th:href="@{/shop/detail/{id}(id=${row.id})}">
+                        <img th:src="@{${row.image}}" style="width: 90px; height: auto"/>
+                    </a>
+                </td>
+                <td th:text="${row.description}"></td>
+                <td th:text="${row.oldPrice}"></td>
+                <td th:text="${row.newPrice}"></td>
+                <td>
+                    <a class="btn btn-success" role="button" th:href="@{shop/add/__${row.id}__}">+</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-md-4" th:if="${shop}">
+        <div class="card sticky-top border-0">
+            <img th:src="@{${shop.image}}" class="card-img-top">
+            <div class="card-body">
+                <h4 class="card-tittle" th:text="${shop.name}"></h4>
+                <p class="card-text" th:text="${shop.oldPrice}"></p>
+                <p class="card-text" th:text="${shop.newPrice}"></p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
