@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--<head th:replace="/layout :: head"></head>-->
+<body>
+<h3>View Product</h3>
+<p>
+    <a th:href="@{/templates/blog}">
+        Back to blog list
+    </a>
+</p>
+<div id="detail">
+    <div class="cusdetail">
+        <label>Name:</label>
+        <label th:text="${blog.blogName}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Price:</label>
+        <label th:text="${blog.blogType}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Producer:</label>
+        <label th:text="${blog.content}"></label>
+    </div>
+    <div>
+        <label>Category</label>
+        <input type="checkbox" th:field="*{category}"
+               th:each="item : ${categoryList}"
+               th:text="${item.categoryName}" th:value="item.categoryId">
+    </div>
+</div>
+<!--<footer th:replace="/layout :: footer"></footer>-->
+</body>
+</html>
