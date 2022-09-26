@@ -37,21 +37,33 @@ public class ShopController {
     }
 
     @GetMapping("/detail/{id}")
-    public ModelAndView showDetail(@PathVariable int id, HttpServletResponse response){
-        Cookie cookie = new Cookie("id", id +"");
-        cookie.setMaxAge(1*48*60*60);
+    public ModelAndView showDetail(@PathVariable int id, HttpServletResponse response) {
+        Cookie cookie = new Cookie("id", id + "");
+        cookie.setMaxAge(1 * 48 * 60 * 60);
         cookie.setPath("/");
         response.addCookie(cookie);
-        return  new ModelAndView("shop/detail", "shops", iShopService.findById(id).get());
+        return new ModelAndView("shop/detail", "shops", iShopService.findById(id).get());
 
     }
+
     @GetMapping("/add/{id}")
-    public String addToSession(@PathVariable int id, @SessionAttribute("cart") CartDto cartDto){
+    public String addToCart(@PathVariable int id, @SessionAttribute("cart") CartDto cartDto) {
         Optional<Shop> shopDetail = iShopService.findById(id);
-        if(shopDetail.isPresent()){
+        if (shopDetail.isPresent()) {
             ShopDto shopDto = new ShopDto();
             BeanUtils.copyProperties(shopDetail.get(), shopDto);
             cartDto.addShop(shopDto);
+        }
+        return "redirect:/cart";
+    }
+
+    @GetMapping("/decrease/{id}")
+    public String deleteToCart(@PathVariable int id, @ModelAttribute("cart") CartDto cartDto) {
+        Optional<Shop> shopOptional = iShopService.findById(id);
+        if (shopOptional.isPresent()) {
+            ShopDto shopDto = new ShopDto();
+            BeanUtils.copyProperties(shopOptional.get(), shopDto);
+            cartDto.deleteShop(shopDto);
         }
         return "redirect:/cart";
     }

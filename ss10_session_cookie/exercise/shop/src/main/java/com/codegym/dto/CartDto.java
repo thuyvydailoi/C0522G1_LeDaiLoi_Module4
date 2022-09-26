@@ -26,4 +26,15 @@ public class CartDto {
             shopMap.put(shopDto, 1);
         }
     }
+
+    public void deleteShop(ShopDto shopDto) {
+        if (shopMap.containsKey(shopDto)) {
+            if (shopMap.get(shopDto) > 1) {
+                Integer currentValue = shopMap.get(shopDto);
+                shopMap.replace(shopDto, currentValue - 1);
+            } else {
+                shopMap.remove(shopDto);
+            }
+        }
+    }
 }
