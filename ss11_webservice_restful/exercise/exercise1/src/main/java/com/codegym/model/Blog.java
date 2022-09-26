@@ -43,7 +43,7 @@ public class Blog {
         this.id = id;
     }
 
-        public String getBlogName() {
+    public String getBlogName() {
         return blogName;
     }
 

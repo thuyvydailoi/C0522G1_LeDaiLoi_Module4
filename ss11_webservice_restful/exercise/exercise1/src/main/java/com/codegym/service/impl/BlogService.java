@@ -28,6 +28,12 @@ public class BlogService implements IBlogService {
         return iBlogRepository.findById(id);
     }
 
+    @Override
+    public List<BlogDto> showList() {
+        return iBlogRepository.showList();
+    }
+
+
 //    @Override
 //    public void save(Blog blog) {
 //        iBlogRepository.save(blog);
@@ -59,9 +65,5 @@ public class BlogService implements IBlogService {
 //        return iBlogRepository.findAllByBlogNameContaining(title, pageable);
 //    }
 
-    @Override
-    public List<BlogDto> showList() {
-        return iBlogRepository.showList();
-    }
 
 }

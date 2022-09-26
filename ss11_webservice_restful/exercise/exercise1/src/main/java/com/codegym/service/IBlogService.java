@@ -2,23 +2,23 @@ package com.codegym.service;
 
 import com.codegym.dto.BlogDto;
 import com.codegym.model.Blog;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
 public interface IBlogService {
     List<Blog> findAll();
 
-//    void save(Blog blog);
-//
     Blog findById(int id);
+
+    List<BlogDto> showList();
+
+
+    //    void save(Blog blog);
+//
 //
 //    void update(Blog blog);
 //
 //    void remove(int id);
 
-    List<BlogDto> showList();
 
 }
