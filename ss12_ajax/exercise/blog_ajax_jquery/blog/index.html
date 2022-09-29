@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+
+<h1>Blog List</h1>
+<input type="text" id="inputSearch">
+<button type="submit" id="showMore">More!!!</button>
+<table class="table table-success table-striped">
+    <theard>
+        <tr>
+            <th>Blog Name</th>
+            <th>Blog Type</th>
+            <th>Content</th>
+            <th>Category</th>
+            <th>Add</th>
+        </tr>
+    </theard>
+    <tbody>
+    <tr>
+        <td>
+            <span>
+                Waitting for minutes...
+            </span>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        let show = 3;
+        $("tbody").empty();
+        $.ajax({
+            url: "http://localhost:8080/api/blog",
+            type: "GET",
+            dataTypes: "json",
+            success: function (data) {
+                let tr = [];
+                for (let i = 0; i < show; i++) {
+                    tr.push("<tr>");
+                    tr.push("<td>" + data[i].id + "</td>")
+                    tr.push("<td>" + data[i].blogName + "</td>")
+                    tr.push("<td>" + data[i].blogType + "</td>")
+                    tr.push("<td>" + data[i].content + "</td>")
+                    tr.push("<td>" + data[i].category.categoryName + "</td>")
+                }
+                $("table").append(tr.join(""));
+            }
+        })
+
+        $("#showMore").click(function () {
+            $.ajax({
+                url: "http://localhost:8080/api/blog",
+                type: "GET",
+                dataTypes: "json",
+                success: function (data) {
+                    $("tbody").empty();
+                    let tr = [];
+                    show += 2;
+                    for (let i = 0; i < show; i++) {
+                        tr.push("<tr>");
+                        tr.push("<td>" + data[i].id + "</td>")
+                        tr.push("<td>" + data[i].blogName + "</td>")
+                        tr.push("<td>" + data[i].blogType + "</td>")
+                        tr.push("<td>" + data[i].content + "</td>")
+                        tr.push("<td>" + data[i].category.categoryName + "</td>")
+                        tr.push("</tr>");
+                        if (show > data.length) {
+                            show = data.length;
+                        }
+                    }
+                    $("table").append(tr.join(""));
+                }
+            })
+        })
+    })
+
+    $(document).ready(function () {
+        $("#inputSearch").keyup(function () {
+            let searchName = $(this).val();
+            $("tbody").empty();
+            $.ajax({
+                url: "http://localhost:8080/api/blog/search/" + searchName,
+                type: "GET",
+                dataTypes: "json",
+                success: function (data) {
+                    let tr = [];
+                    for (let i = 0; i < data.length; i++) {
+                        tr.push("<tr>");
+                        tr.push("<td>" + data[i].id + "</td>")
+                        tr.push("<td>" + data[i].blogName + "</td>")
+                        tr.push("<td>" + data[i].blogType + "</td>")
+                        tr.push("<td>" + data[i].content + "</td>")
+                        tr.push("<td>" + data[i].category.categoryName + "</td>")
+                    }
+                    $("table").append(tr.join(""));
+                }
+            })
+        })
+    })
+
+</script>
+</html>
