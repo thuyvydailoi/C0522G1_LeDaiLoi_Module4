@@ -6,11 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Optional;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/smartphones")
 public class SmartphoneController {
     @Autowired
@@ -21,16 +21,23 @@ public class SmartphoneController {
         return new ResponseEntity<>(smartphoneService.save(smartphone), HttpStatus.CREATED);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Smartphone> findById(@PathVariable Long id) {
+        if (!smartphoneService.findById(id).isPresent()){
+            return new ResponseEntity<>(smartphoneService.findById(id).get(), HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(smartphoneService.findById(id).get(), HttpStatus.OK);
+
+    }
+
     @GetMapping
     public ResponseEntity<Iterable<Smartphone>> allPhones() {
         return new ResponseEntity<>(smartphoneService.findAll(), HttpStatus.OK);
     }
 
     @GetMapping("/list")
-    public ModelAndView getAllSmartphonePage() {
-        ModelAndView modelAndView = new ModelAndView("/phones/list");
-        modelAndView.addObject("smartphones", smartphoneService.findAll());
-        return modelAndView;
+    public ResponseEntity<Iterable<Smartphone>> getAllSmartphonePage() {
+        return new ResponseEntity<>(smartphoneService.findAll(), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
@@ -41,5 +48,20 @@ public class SmartphoneController {
         }
         smartphoneService.remove(id);
         return new ResponseEntity<>(smartphoneOptional.get(), HttpStatus.NO_CONTENT);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Smartphone> updateBlog(@PathVariable Long id,
+                                                 @RequestBody Smartphone smartphone) {
+        Smartphone currentSmartphone = smartphoneService.findById(id).get();
+        if (currentSmartphone == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        currentSmartphone.setModel(smartphone.getModel());
+        currentSmartphone.setPrice(smartphone.getPrice());
+        currentSmartphone.setProducer(smartphone.getProducer());
+
+        smartphoneService.save(currentSmartphone);
+        return new ResponseEntity<>(currentSmartphone, HttpStatus.OK);
     }
 }
