@@ -1,2 +1,4 @@
-package com.codegym.controller;public class SmartController {
+package com.codegym.controller;
+
+public class SmartController {
 }

@@ -1,9 +1,12 @@
-package com.codegym.service;
+package com.codegym.service.impl;
 
 import com.codegym.model.Smartphone;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
+import com.codegym.repository.ISmartphoneRepository;
+import com.codegym.service.ISmartphoneService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class SmartphoneService implements ISmartphoneService {

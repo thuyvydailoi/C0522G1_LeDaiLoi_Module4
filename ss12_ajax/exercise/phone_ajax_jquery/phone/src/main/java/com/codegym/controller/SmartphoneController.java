@@ -23,7 +23,7 @@ public class SmartphoneController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Smartphone> findById(@PathVariable Long id) {
-        if (!smartphoneService.findById(id).isPresent()){
+        if (!smartphoneService.findById(id).isPresent()) {
             return new ResponseEntity<>(smartphoneService.findById(id).get(), HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<>(smartphoneService.findById(id).get(), HttpStatus.OK);
