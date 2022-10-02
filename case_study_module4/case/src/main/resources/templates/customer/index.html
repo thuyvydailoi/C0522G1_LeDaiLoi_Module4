@@ -10,39 +10,47 @@
     <input type="submit" value="Search"/>
 </form>
 <p>
-    <a th:href="@{/blog/create}">
-        Add new blog
+    <a th:href="@{/customer/create}">
+        Add new customer
     </a>
 </p>
-<table id="products">
+<table id="customer">
     <thead>
     <tr>
-        <th>Blog Name</th>
-        <th>Blog Type</th>
-        <th>Content</th>
-        <th>Category</th>
+        <th>Customer Name</th>
+        <th>dateOfbirth</th>
+        <th>Gender</th>
+        <th>Id Card</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Customer Type Id</th>
         <th>Edit</th>
         <th>Delete</th>
         <th>View</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="row : ${blogs}">
-        <td th:text="${row.blogName}"></td>
-        <td th:text="${row.blogType}"></td>
-        <td th:text="${row.content}"></td>
-        <td th:if="${row.category}" th:text="${row.category.categoryName}"></td>
-        <td><a th:href="@{/blog/edit/__${row.id}__}">edit</a></td>
-        <td><a th:href="@{/blog/delete/__${row.id}__}">delete</a></td>
-        <td><a th:href="@{/blog/view/__${row.id}__}">view</a></td>
+    <tr th:each="row : ${customers}">
+        <td th:text="${row.name}"></td>
+        <td th:text="${row.dateOfBirth}"></td>
+        <td th:text="${row.gender}"></td>
+        <td th:text="${row.idCard}"></td>
+        <td th:text="${row.phoneNumber}"></td>
+        <td th:text="${row.email}"></td>
+        <td th:text="${row.address}"></td>
+        <td th:if="${row.customerType}" th:text="${row.customerType.id}"></td>
+        <td><a th:href="@{/customer/edit/__${row.id}__}">edit</a></td>
+        <td><a th:href="@{/customer/delete/__${row.id}__}">delete</a></td>
+        <td><a th:href="@{/customer/view/__${row.id}__}">view</a></td>
     </tr>
     </tbody>
 </table>
-<div>
-    <a th:href="@{'/blog'(page=${blogs.number - 1}, search=${search})}" th:if="${blogs.hasPrevious()}">Previous</a>
-    <span th:text="${blogs.number + 1}"></span>/<span th:text="${blogs.totalPages}"></span>
-    <a th:href="@{'/blog'(page=${blogs.number + 1}, search=${search})}" th:if="${blogs.hasNext()}">Next</a>
-</div>
+<!--<div>-->
+<!--    <a th:href="@{'/blog'(page=${blogs.number - 1}, search=${search})}" th:if="${blogs.hasPrevious()}">Previous</a>-->
+<!--    <span th:text="${blogs.number + 1}"></span>/<span th:text="${blogs.totalPages}"></span>-->
+<!--    <a th:href="@{'/blog'(page=${blogs.number + 1}, search=${search})}" th:if="${blogs.hasNext()}">Next</a>-->
+<!--</div>-->
 <!--<footer th:replace="/layout :: footer"></footer>-->
 </body>
 </html>

@@ -1,8 +1,9 @@
-package com.codegym.service.impl;
+package com.codegym.service.customer.impl;
 
-import com.codegym.model.Customer;
-import com.codegym.repository.ICustomerRepository;
-import com.codegym.service.ICustomerService;
+import com.codegym.model.customer.Customer;
+import com.codegym.repository.customer.ICustomerRepository;
+import com.codegym.service.customer.ICustomerService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -11,6 +12,8 @@ import java.util.List;
 
 @Service
 public class CustomerService implements ICustomerService {
+
+    @Autowired
     private ICustomerRepository iCustomerRepository;
 
     @Override
@@ -38,13 +41,10 @@ public class CustomerService implements ICustomerService {
         iCustomerRepository.deleteById(id);
     }
 
-//    @Override
-//    public Page<Customer> findAll(Pageable pageable) {
-//        return null;
-//    }
-//
-//    @Override
-//    public Page<Customer> findAllByBlogNameContaining(String search, Pageable pageable) {
-//        return null;
-//    }
+    @Override
+    public Page<Customer> search(String nameSearch, String addressSearch, String phoneSearch, Pageable pageable) {
+        return iCustomerRepository.search(nameSearch, addressSearch, phoneSearch, pageable);
+    }
+
+
 }

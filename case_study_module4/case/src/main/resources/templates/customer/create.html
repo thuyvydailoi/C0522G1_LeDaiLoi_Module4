@@ -12,21 +12,45 @@
     <form th:action="@{/customer/save}" th:object="${customerDto}"
           method="POST" novalidate="novalidate">
         <div>
-            <label>Blog name</label>
-            <input type="text" th:field="*{blogName}"/>
+            <label>Customer Name</label>
+            <input type="text" th:field="*{name}"/>
         </div>
         <div>
-            <label>Blog type</label>
-            <input type="text" th:field="*{blogType}"/>
+            <label>Date Of Birth</label>
+            <input type="text" th:field="*{dateOfBirth}"/>
         </div>
         <div>
-            <label>Content</label>
-            <input type="text" th:field="*{content}"/>
+            <label>Gender</label>
+            <input type="text" th:field="*{gender}"/>
         </div>
         <div>
-            <label>Thể loại</label>
-            <select th:field="*{category}">
-                <option th:each=" item: ${categoryList}" th:text="${item.categoryName}" th:value="${item.categoryId}">
+            <label>Id Card</label>
+            <input type="text" th:field="*{idCard}"/>
+        </div>
+        <div>
+            <div>
+                <label>Phone Number</label>
+                <input type="text" th:field="*{phoneNumber}"/>
+            </div>
+        </div>
+        <div>
+            <div>
+                <label>Email</label>
+                <input type="text" th:field="*{email}"/>
+            </div>
+        </div>
+        <div>
+            <div>
+                <label>Address</label>
+                <input type="text" th:field="*{address}"/>
+            </div>
+        </div>
+        <div>
+
+            <label>Customer Type Id</label>
+            <select th:field="*{customerType}">
+                <option th:each=" item: ${customerTypeList}" th:text="${item.name}"
+                        th:value="${item.id}">
                 </option>
             </select>
         </div>

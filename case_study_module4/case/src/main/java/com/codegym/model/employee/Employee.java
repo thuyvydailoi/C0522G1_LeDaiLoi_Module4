@@ -1,4 +1,4 @@
-package com.codegym.model;
+package com.codegym.model.employee;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,21 +6,19 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Customer {
+public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private int customer_type_id;
-
     private String name;
 
     private String dateOfBirth;
 
-    private String gender;
+    private  String idCard;
 
-    private String idCard;
+    private Double salary;
 
     private String phoneNumber;
 
@@ -28,17 +26,15 @@ public class Customer {
 
     private String address;
 
-    public Customer() {
+    public Employee() {
     }
 
-    public Customer(int id, int customer_type_id, String name, String dateOfBirth, String gender, String idCard,
-                           String phoneNumber, String email, String address) {
+    public Employee(int id, String name, String dateOfBirth, String idCard, Double salary, String phoneNumber, String email, String address) {
         this.id = id;
-        this.customer_type_id = customer_type_id;
         this.name = name;
         this.dateOfBirth = dateOfBirth;
-        this.gender = gender;
         this.idCard = idCard;
+        this.salary = salary;
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.address = address;
@@ -50,14 +46,6 @@ public class Customer {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getCustomer_type_id() {
-        return customer_type_id;
-    }
-
-    public void setCustomer_type_id(int customer_type_id) {
-        this.customer_type_id = customer_type_id;
     }
 
     public String getName() {
@@ -76,20 +64,20 @@ public class Customer {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
     public String getIdCard() {
         return idCard;
     }
 
     public void setIdCard(String idCard) {
         this.idCard = idCard;
+    }
+
+    public Double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Double salary) {
+        this.salary = salary;
     }
 
     public String getPhoneNumber() {

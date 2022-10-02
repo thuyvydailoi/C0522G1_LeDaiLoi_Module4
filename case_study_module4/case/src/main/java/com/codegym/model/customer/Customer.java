@@ -1,22 +1,19 @@
-package com.codegym.dto;
+package com.codegym.model.customer;
 
-import com.codegym.model.customer.CustomerType;
-import org.springframework.validation.Errors;
-import org.springframework.validation.Validator;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
-import java.util.Date;
+import javax.persistence.*;
 
+@Entity
+public class Customer {
 
-public class CustomerDto implements Validator {
-
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int customerId;
-
-    private int customerTypeId;
 
     private String customerName;
 
-    private Date dateOfBirth;
+    private String dateOfBirth;
 
     private String customerGender;
 
@@ -29,14 +26,16 @@ public class CustomerDto implements Validator {
     private String address;
 
 
+    @JsonManagedReference
+    @JoinColumn(name = "customer_type_id", referencedColumnName = "id")
+    @ManyToOne
     private CustomerType customerType;
 
-    public CustomerDto() {
+    public Customer() {
     }
 
-    public CustomerDto(int customerId, int customerTypeId, String customerName, Date dateOfBirth, String customerGender, String idCard, String customerPhoneNumber, String customerEmail, String address, CustomerType customerType) {
+    public Customer(int customerId, String customerName, String dateOfBirth, String customerGender, String idCard, String customerPhoneNumber, String customerEmail, String address, CustomerType customerType) {
         this.customerId = customerId;
-        this.customerTypeId = customerTypeId;
         this.customerName = customerName;
         this.dateOfBirth = dateOfBirth;
         this.customerGender = customerGender;
@@ -55,14 +54,6 @@ public class CustomerDto implements Validator {
         this.customerId = customerId;
     }
 
-    public int getCustomerTypeId() {
-        return customerTypeId;
-    }
-
-    public void setCustomerTypeId(int customerTypeId) {
-        this.customerTypeId = customerTypeId;
-    }
-
     public String getCustomerName() {
         return customerName;
     }
@@ -71,11 +62,11 @@ public class CustomerDto implements Validator {
         this.customerName = customerName;
     }
 
-    public Date getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -125,15 +116,5 @@ public class CustomerDto implements Validator {
 
     public void setCustomerType(CustomerType customerType) {
         this.customerType = customerType;
-    }
-
-    @Override
-    public boolean supports(Class<?> clazz) {
-        return false;
-    }
-
-    @Override
-    public void validate(Object target, Errors errors) {
-        CustomerDto customerDto = (CustomerDto) target;
     }
 }
