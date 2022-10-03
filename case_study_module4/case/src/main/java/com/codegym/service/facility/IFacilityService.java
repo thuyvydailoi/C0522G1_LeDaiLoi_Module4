@@ -1,4 +1,5 @@
-package com.codegym.service;
+package com.codegym.service.facility;
 
 public interface IFacilityService {
+
 }

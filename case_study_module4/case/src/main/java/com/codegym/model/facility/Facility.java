@@ -1,16 +1,16 @@
 package com.codegym.model.facility;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.codegym.model.contract.Contract;
+
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Facility {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int facilityId;
 
     private int are;
 
@@ -28,11 +28,27 @@ public class Facility {
 
     private String facilityFree;
 
+    private String isDelete;
+
+    @OneToMany(mappedBy = "facility")
+    private Set<Contract> contractSet;
+
+    @ManyToOne
+    @JoinColumn(name = "facility_type_id", referencedColumnName = "facilityTypeId")
+    private FacilityType facilityType;
+
+    @ManyToOne
+    @JoinColumn(name = "rent_id", referencedColumnName = "rentId")
+    private RentType rentType;
+
     public Facility() {
     }
 
-    public Facility(int id, int are, Double cost, int maxPeople, String standardRoom, String descriptionOtherConvernience, Double poolArea, int numberOfFloors, String facilityFree) {
-        this.id = id;
+    public Facility(int facilityId, int are, Double cost, int maxPeople, String standardRoom,
+                    String descriptionOtherConvernience, Double poolArea, int numberOfFloors,
+                    String facilityFree, String isDelete, Set<Contract> contractSet, FacilityType facilityType,
+                    RentType rentType) {
+        this.facilityId = facilityId;
         this.are = are;
         this.cost = cost;
         this.maxPeople = maxPeople;
@@ -41,14 +57,18 @@ public class Facility {
         this.poolArea = poolArea;
         this.numberOfFloors = numberOfFloors;
         this.facilityFree = facilityFree;
+        this.isDelete = isDelete;
+        this.contractSet = contractSet;
+        this.facilityType = facilityType;
+        this.rentType = rentType;
     }
 
-    public int getId() {
-        return id;
+    public int getFacilityId() {
+        return facilityId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setFacilityId(int facilityId) {
+        this.facilityId = facilityId;
     }
 
     public int getAre() {
@@ -113,5 +133,37 @@ public class Facility {
 
     public void setFacilityFree(String facilityFree) {
         this.facilityFree = facilityFree;
+    }
+
+    public Set<Contract> getContractSet() {
+        return contractSet;
+    }
+
+    public void setContractSet(Set<Contract> contractSet) {
+        this.contractSet = contractSet;
+    }
+
+    public String getIsDelete() {
+        return isDelete;
+    }
+
+    public void setIsDelete(String isDelete) {
+        this.isDelete = isDelete;
+    }
+
+    public FacilityType getFacilityType() {
+        return facilityType;
+    }
+
+    public void setFacilityType(FacilityType facilityType) {
+        this.facilityType = facilityType;
+    }
+
+    public RentType getRentType() {
+        return rentType;
+    }
+
+    public void setRentType(RentType rentType) {
+        this.rentType = rentType;
     }
 }

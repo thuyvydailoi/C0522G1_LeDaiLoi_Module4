@@ -4,63 +4,50 @@ import com.codegym.model.customer.CustomerType;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
-import java.util.Date;
-
 
 public class CustomerDto implements Validator {
 
+    private Integer customerId;
 
-    private int customerId;
-
-    private int customerTypeId;
-
+    //    @NotBlank(message = "Tên không được để trống.")
+//    @Pattern(regexp = "^(([\\p{Lu}][\\p{Ll}]{1,8})(\\s([\\p{Lu}]|[\\p{Lu}][\\p{Ll}]{1,10})){0,5})| *$",
+//            message = "Tên khách hàng không được chứa số, và các kí tự đầu tiên của mỗi từ phải viết hoa.")
     private String customerName;
 
-    private Date dateOfBirth;
+    //    @Pattern(regexp = "^(19|20)\\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[0-1])$",
+//            message = "Ngày sinh phải đúng định dạng DD/MM/YYYY.")
+    private String customerBirthday;
 
-    private String customerGender;
+    //    @NotNull(message = "Vui lòng chọn giới tính.")
+    private Integer customerGender;
 
-    private String idCard;
+    //    @NotBlank(message = "Số CMND/CCCD không được để trống.")
+//    @Pattern(regexp = "^(\\d{9}|\\d{12})| *$",
+//            message = "Số CMND/CCCD phải đúng định dạng XXXXXXXXX hoặc XXXXXXXXXXXX (X là số 0-9).")
+    private String customerIdCard;
 
-    private String customerPhoneNumber;
+    //    @NotBlank(message = "Số điện thoại không được để trống.")
+//    @Pattern(regexp = "^((0|[(]84[)][+])9[01]\\d{7})| *$", message =
+//            "Số điện thoại phải đúng định dạng 090xxxxxxx hoặc 091xxxxxxx hoặc (84)+90xxxxxxx hoặc (84)+91xxxxxxx.")
+    private String customerPhone;
 
+    //    @NotBlank(message = "Email không được để trống.")
+//    @Email(message = "Địa chỉ email phải đúng định dạng.")
     private String customerEmail;
 
-    private String address;
-
-
+    //    @NotBlank(message = "Địa chỉ không được để trống.")
+    private String customerAddress;
     private CustomerType customerType;
 
     public CustomerDto() {
     }
 
-    public CustomerDto(int customerId, int customerTypeId, String customerName, Date dateOfBirth, String customerGender, String idCard, String customerPhoneNumber, String customerEmail, String address, CustomerType customerType) {
-        this.customerId = customerId;
-        this.customerTypeId = customerTypeId;
-        this.customerName = customerName;
-        this.dateOfBirth = dateOfBirth;
-        this.customerGender = customerGender;
-        this.idCard = idCard;
-        this.customerPhoneNumber = customerPhoneNumber;
-        this.customerEmail = customerEmail;
-        this.address = address;
-        this.customerType = customerType;
-    }
-
-    public int getCustomerId() {
+    public Integer getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(int customerId) {
+    public void setCustomerId(Integer customerId) {
         this.customerId = customerId;
-    }
-
-    public int getCustomerTypeId() {
-        return customerTypeId;
-    }
-
-    public void setCustomerTypeId(int customerTypeId) {
-        this.customerTypeId = customerTypeId;
     }
 
     public String getCustomerName() {
@@ -71,36 +58,36 @@ public class CustomerDto implements Validator {
         this.customerName = customerName;
     }
 
-    public Date getDateOfBirth() {
-        return dateOfBirth;
+    public String getCustomerBirthday() {
+        return customerBirthday;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public void setCustomerBirthday(String customerBirthday) {
+        this.customerBirthday = customerBirthday;
     }
 
-    public String getCustomerGender() {
+    public Integer getCustomerGender() {
         return customerGender;
     }
 
-    public void setCustomerGender(String customerGender) {
+    public void setCustomerGender(Integer customerGender) {
         this.customerGender = customerGender;
     }
 
-    public String getIdCard() {
-        return idCard;
+    public String getCustomerIdCard() {
+        return customerIdCard;
     }
 
-    public void setIdCard(String idCard) {
-        this.idCard = idCard;
+    public void setCustomerIdCard(String customerIdCard) {
+        this.customerIdCard = customerIdCard;
     }
 
-    public String getCustomerPhoneNumber() {
-        return customerPhoneNumber;
+    public String getCustomerPhone() {
+        return customerPhone;
     }
 
-    public void setCustomerPhoneNumber(String customerPhoneNumber) {
-        this.customerPhoneNumber = customerPhoneNumber;
+    public void setCustomerPhone(String customerPhone) {
+        this.customerPhone = customerPhone;
     }
 
     public String getCustomerEmail() {
@@ -111,12 +98,12 @@ public class CustomerDto implements Validator {
         this.customerEmail = customerEmail;
     }
 
-    public String getAddress() {
-        return address;
+    public String getCustomerAddress() {
+        return customerAddress;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setCustomerAddress(String customerAddress) {
+        this.customerAddress = customerAddress;
     }
 
     public CustomerType getCustomerType() {
@@ -135,5 +122,6 @@ public class CustomerDto implements Validator {
     @Override
     public void validate(Object target, Errors errors) {
         CustomerDto customerDto = (CustomerDto) target;
+
     }
 }

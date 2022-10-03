@@ -53,14 +53,14 @@
          alt="">
 
     <div class="container-fluid text-end my-4 me-4">
-      <span class="badge text-bg-warning mt-3">Lê Đại Lợi</span>
+      <span class="badge text-bg-warning mt-3">Le Dai Loi</span>
     </div>
   </div>
 
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid mx-5">
       <a class="navbar-brand font-weight-bold" th:href="@{/}">
-        <i class="fa-solid fa-house-chimney h5 mx-1"></i> Trang chủ
+        <i class="fa-solid fa-house-chimney h5 mx-1"></i> Home
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -73,37 +73,37 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item dropdown ms-3">
             <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
-               aria-expanded="false">Nhân viên</a>
+               aria-expanded="false"> Employee</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" th:href="@{/templates/employee}">Danh sách nhân viên</a></li>
+              <li><a class="dropdown-item" th:href="@{/templates/employee}">Employee List</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" th:href="@{/employee/create}">Thêm nhân viên mới</a></li>
+              <li><a class="dropdown-item" th:href="@{/employee/create}">Add new employee</a></li>
             </ul>
           </li>
 
           <li class="nav-item dropdown ms-3">
             <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
-               aria-expanded="false">Khách hàng</a>
+               aria-expanded="false"> Customer</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" th:href="@{/templates/customer}">Danh sách khách hàng</a></li>
+              <li><a class="dropdown-item" th:href="@{/customer/list}">Customer List</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" th:href="@{/customer/create}">Thêm khách hàng mới</a></li>
+              <li><a class="dropdown-item" th:href="@{/customer/create}">Add new customer</a></li>
             </ul>
           </li>
 
           <li class="nav-item dropdown ms-3">
             <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
-               aria-expanded="false">Dịch vụ</a>
+               aria-expanded="false"> Facility</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" th:href="@{/templates/facility}">Danh sách dịch vụ</a></li>
+              <li><a class="dropdown-item" th:href="@{/templates/facility}">Facility list</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" th:href="@{/facility/create}">Thêm dịch vụ mới</a></li>
+              <li><a class="dropdown-item" th:href="@{/facility/create}">Add new facility</a></li>
             </ul>
           </li>
 
@@ -126,7 +126,7 @@
 
 <footer th:fragment="footer">
   <div class="container-fluid text-center footer mt-5" style="height: 50px">
-    <strong class="text-light pt-2">&copy;FURAMA - hoạt động từ năm 1997.</strong>
+    <strong class="text-light pt-2">&copy;FURAMA - Sáng lập bởi Lê Đại Lợi.</strong>
   </div>
 </footer>
 </body>

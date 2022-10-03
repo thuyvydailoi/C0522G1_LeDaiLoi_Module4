@@ -1,53 +1,42 @@
 package com.codegym.model.customer;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
 public class CustomerType {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer customerTypeId;
+    private String customerTypeName;
 
-    private String name;
-
-    @JsonBackReference
-    @OneToMany(mappedBy = "customerType", cascade = CascadeType.ALL)
-    private Set<Customer> customerSet;
+    @OneToMany(mappedBy = "customerType")
+    private Set<Customer> customers;
 
     public CustomerType() {
     }
 
-    public CustomerType(int id, String name, Set<Customer> customerSet) {
-        this.id = id;
-        this.name = name;
-        this.customerSet = customerSet;
+    public Integer getCustomerTypeId() {
+        return customerTypeId;
     }
 
-    public int getId() {
-        return id;
+    public void setCustomerTypeId(Integer customerTypeId) {
+        this.customerTypeId = customerTypeId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public String getCustomerTypeName() {
+        return customerTypeName;
     }
 
-    public String getName() {
-        return name;
+    public void setCustomerTypeName(String customerTypeName) {
+        this.customerTypeName = customerTypeName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Set<Customer> getCustomers() {
+        return customers;
     }
 
-    public Set<Customer> getCustomerSet() {
-        return customerSet;
-    }
-
-    public void setCustomerSet(Set<Customer> customerSet) {
-        this.customerSet = customerSet;
+    public void setCustomers(Set<Customer> customer) {
+        this.customers = customer;
     }
 }

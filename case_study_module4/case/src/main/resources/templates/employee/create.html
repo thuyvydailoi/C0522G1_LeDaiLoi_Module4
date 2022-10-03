@@ -22,7 +22,7 @@
     </p>
 
     <div class="d-flex justify-content-center">
-        <form class="w-50 border border-2 border-success p-3 rounded formCSS" th:action="@{/customer/save}"
+        <form class="w-50 border border-2 border-success p-3 rounded formCSS" th:action="@{/customer/create}"
               th:object="${customerDto}" method="POST" novalidate="novalidate">
             <div class="form-group">
                 <label for="name" class="h6">Customer Name:</label>
