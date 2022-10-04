@@ -1,40 +1,57 @@
 package com.codegym.dto;
 
+import com.codegym.model.contract.Contract;
 import com.codegym.model.facility.FacilityType;
 import com.codegym.model.facility.RentType;
 
+import java.util.Set;
+
 public class FacilityDto {
     private Integer facilityId;
+
     private String facilityName;
-    private String facilityArea;
-    private String facilityCost;
-    private String facilityMaxPeople;
-    private String facilityStandardRoom;
-    private String facilityDescriptionOtherConvenience;
-    private String facilityPoolArea;
-    private String facilityNumberOfFloors;
+
+    private String are;
+
+    private String cost;
+
+    private String maxPeople;
+
+    private String standardRoom;
+
+    private String descriptionOtherConvenience;
+
+    private String poolArea;
+
+    private String numberOfFloors;
+
     private String facilityFree;
+
+    private Set<Contract> contractSet;
+
     private FacilityType facilityType;
+
     private RentType rentType;
-    private boolean isDelete;
 
     public FacilityDto() {
     }
 
-    public FacilityDto(Integer facilityId, String facilityName, String facilityArea, String facilityCost, String facilityMaxPeople,
-                       String facilityStandardRoom, String facilityDescriptionOtherConvenience, String facilityPoolArea,
-                       String facilityNumberOfFloors, String facilityFree, boolean isDelete, FacilityType facilityType,
-                       RentType rentType) {
+    public FacilityDto(Integer facilityId, String facilityName, String are,
+                       String cost, String maxPeople, String standardRoom,
+                       String descriptionOtherConvenience, String poolArea,
+                       String numberOfFloors, String facilityFree, Set<Contract> contractSet,
+                       FacilityType facilityType, RentType rentType) {
         this.facilityId = facilityId;
         this.facilityName = facilityName;
-        this.facilityArea = facilityArea;
-        this.facilityCost = facilityCost;
-        this.facilityMaxPeople = facilityMaxPeople;
-        this.facilityStandardRoom = facilityStandardRoom;
-        this.facilityDescriptionOtherConvenience = facilityDescriptionOtherConvenience;
-        this.facilityPoolArea = facilityPoolArea;
-        this.facilityNumberOfFloors = facilityNumberOfFloors;
+        this.are = are;
+        this.cost = cost;
+        this.maxPeople = maxPeople;
+        this.standardRoom = standardRoom;
+        this.descriptionOtherConvenience = descriptionOtherConvenience;
+        this.poolArea = poolArea;
+        this.numberOfFloors = numberOfFloors;
         this.facilityFree = facilityFree;
+        this.contractSet = contractSet;
         this.facilityType = facilityType;
         this.rentType = rentType;
     }
@@ -55,60 +72,60 @@ public class FacilityDto {
         this.facilityName = facilityName;
     }
 
-    public String getFacilityArea() {
-        return facilityArea;
+    public String getAre() {
+        return are;
     }
 
-    public void setFacilityArea(String facilityArea) {
-        this.facilityArea = facilityArea;
+    public void setAre(String are) {
+        this.are = are;
     }
 
-    public String getFacilityCost() {
-        return facilityCost;
+    public String getCost() {
+        return cost;
     }
 
-    public void setFacilityCost(String facilityCost) {
-        this.facilityCost = facilityCost;
+    public void setCost(String cost) {
+        this.cost = cost;
     }
 
-    public String getFacilityMaxPeople() {
-        return facilityMaxPeople;
+    public String getMaxPeople() {
+        return maxPeople;
     }
 
-    public void setFacilityMaxPeople(String facilityMaxPeople) {
-        this.facilityMaxPeople = facilityMaxPeople;
+    public void setMaxPeople(String maxPeople) {
+        this.maxPeople = maxPeople;
     }
 
-    public String getFacilityStandardRoom() {
-        return facilityStandardRoom;
+    public String getStandardRoom() {
+        return standardRoom;
     }
 
-    public void setFacilityStandardRoom(String facilityStandardRoom) {
-        this.facilityStandardRoom = facilityStandardRoom;
+    public void setStandardRoom(String standardRoom) {
+        this.standardRoom = standardRoom;
     }
 
-    public String getFacilityDescriptionOtherConvenience() {
-        return facilityDescriptionOtherConvenience;
+    public String getDescriptionOtherConvenience() {
+        return descriptionOtherConvenience;
     }
 
-    public void setFacilityDescriptionOtherConvenience(String facilityDescriptionOtherConvenience) {
-        this.facilityDescriptionOtherConvenience = facilityDescriptionOtherConvenience;
+    public void setDescriptionOtherConvenience(String descriptionOtherConvenience) {
+        this.descriptionOtherConvenience = descriptionOtherConvenience;
     }
 
-    public String getFacilityPoolArea() {
-        return facilityPoolArea;
+    public String getPoolArea() {
+        return poolArea;
     }
 
-    public void setFacilityPoolArea(String facilityPoolArea) {
-        this.facilityPoolArea = facilityPoolArea;
+    public void setPoolArea(String poolArea) {
+        this.poolArea = poolArea;
     }
 
-    public String getFacilityNumberOfFloors() {
-        return facilityNumberOfFloors;
+    public String getNumberOfFloors() {
+        return numberOfFloors;
     }
 
-    public void setFacilityNumberOfFloors(String facilityNumberOfFloors) {
-        this.facilityNumberOfFloors = facilityNumberOfFloors;
+    public void setNumberOfFloors(String numberOfFloors) {
+        this.numberOfFloors = numberOfFloors;
     }
 
     public String getFacilityFree() {
@@ -117,6 +134,14 @@ public class FacilityDto {
 
     public void setFacilityFree(String facilityFree) {
         this.facilityFree = facilityFree;
+    }
+
+    public Set<Contract> getContractSet() {
+        return contractSet;
+    }
+
+    public void setContractSet(Set<Contract> contractSet) {
+        this.contractSet = contractSet;
     }
 
     public FacilityType getFacilityType() {
@@ -133,13 +158,5 @@ public class FacilityDto {
 
     public void setRentType(RentType rentType) {
         this.rentType = rentType;
-    }
-
-    public boolean isDelete() {
-        return isDelete;
-    }
-
-    public void setDelete(boolean delete) {
-        isDelete = delete;
     }
 }

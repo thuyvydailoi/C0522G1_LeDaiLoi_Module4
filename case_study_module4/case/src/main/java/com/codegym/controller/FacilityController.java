@@ -84,10 +84,11 @@ public class FacilityController {
 
     @GetMapping("/edit/{id}")
     public String showFormEdit(@PathVariable Integer id, Model model) {
-
+        FacilityDto facilityDto = new FacilityDto();
+        BeanUtils.copyProperties(facilityService.findById(id).get(), facilityDto);
         model.addAttribute("rentTypeList", rentTypeService.findAll());
         model.addAttribute("facilityTypeList", facilityTypeService.findAll());
-        model.addAttribute("facilityDto", facilityService.findById(id).get());
+        model.addAttribute("facilityDto", facilityDto);
         return "facility/edit";
     }
 
