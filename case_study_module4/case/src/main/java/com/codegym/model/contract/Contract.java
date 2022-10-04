@@ -15,6 +15,7 @@ public class Contract {
     private String startDate;
     private String endDate;
     private String deposit;
+    private boolean isDelete;
 
     @ManyToOne
     @JoinColumn(name = "customer_id", referencedColumnName = "customerId")
@@ -31,11 +32,13 @@ public class Contract {
     public Contract() {
     }
 
-    public Contract(Integer contractId, String startDate, String endDate, String deposit, Customer customer, Employee employee, Facility facility) {
+    public Contract(Integer contractId, String startDate, String endDate, String deposit, boolean isDelete,
+                    Customer customer, Employee employee, Facility facility) {
         this.contractId = contractId;
         this.startDate = startDate;
         this.endDate = endDate;
         this.deposit = deposit;
+        this.isDelete = isDelete;
         this.customer = customer;
         this.employee = employee;
         this.facility = facility;
@@ -95,5 +98,13 @@ public class Contract {
 
     public void setFacility(Facility facility) {
         this.facility = facility;
+    }
+
+    public boolean isDelete() {
+        return isDelete;
+    }
+
+    public void setDelete(boolean delete) {
+        isDelete = delete;
     }
 }

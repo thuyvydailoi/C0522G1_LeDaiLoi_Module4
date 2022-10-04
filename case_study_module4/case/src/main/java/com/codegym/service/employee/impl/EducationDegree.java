@@ -1,4 +1,6 @@
 package com.codegym.service.employee.impl;
 
-public class EducationDegree {
+import com.codegym.service.employee.IEducationDegreeService;
+
+public class EducationDegree implements IEducationDegreeService {
 }

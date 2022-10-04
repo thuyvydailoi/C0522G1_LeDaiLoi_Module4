@@ -6,36 +6,13 @@ import org.springframework.validation.Validator;
 
 
 public class CustomerDto implements Validator {
-
     private Integer customerId;
-
-    //    @NotBlank(message = "Tên không được để trống.")
-//    @Pattern(regexp = "^(([\\p{Lu}][\\p{Ll}]{1,8})(\\s([\\p{Lu}]|[\\p{Lu}][\\p{Ll}]{1,10})){0,5})| *$",
-//            message = "Tên khách hàng không được chứa số, và các kí tự đầu tiên của mỗi từ phải viết hoa.")
     private String customerName;
-
-    //    @Pattern(regexp = "^(19|20)\\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[0-1])$",
-//            message = "Ngày sinh phải đúng định dạng DD/MM/YYYY.")
     private String customerBirthday;
-
-    //    @NotNull(message = "Vui lòng chọn giới tính.")
     private Integer customerGender;
-
-    //    @NotBlank(message = "Số CMND/CCCD không được để trống.")
-//    @Pattern(regexp = "^(\\d{9}|\\d{12})| *$",
-//            message = "Số CMND/CCCD phải đúng định dạng XXXXXXXXX hoặc XXXXXXXXXXXX (X là số 0-9).")
     private String customerIdCard;
-
-    //    @NotBlank(message = "Số điện thoại không được để trống.")
-//    @Pattern(regexp = "^((0|[(]84[)][+])9[01]\\d{7})| *$", message =
-//            "Số điện thoại phải đúng định dạng 090xxxxxxx hoặc 091xxxxxxx hoặc (84)+90xxxxxxx hoặc (84)+91xxxxxxx.")
     private String customerPhone;
-
-    //    @NotBlank(message = "Email không được để trống.")
-//    @Email(message = "Địa chỉ email phải đúng định dạng.")
     private String customerEmail;
-
-    //    @NotBlank(message = "Địa chỉ không được để trống.")
     private String customerAddress;
     private CustomerType customerType;
 

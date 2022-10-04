@@ -10,25 +10,27 @@ public class Facility {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int facilityId;
+    private Integer facilityId;
 
-    private int are;
+    private String facilityName;
 
-    private Double cost;
+    private String are;
 
-    private int maxPeople;
+    private String cost;
+
+    private String maxPeople;
 
     private String standardRoom;
 
-    private String descriptionOtherConvernience;
+    private String descriptionOtherConvenience;
 
-    private Double poolArea;
+    private String poolArea;
 
-    private int numberOfFloors;
+    private String numberOfFloors;
 
     private String facilityFree;
 
-    private String isDelete;
+    private Boolean isDelete;
 
     @OneToMany(mappedBy = "facility")
     private Set<Contract> contractSet;
@@ -44,16 +46,14 @@ public class Facility {
     public Facility() {
     }
 
-    public Facility(int facilityId, int are, Double cost, int maxPeople, String standardRoom,
-                    String descriptionOtherConvernience, Double poolArea, int numberOfFloors,
-                    String facilityFree, String isDelete, Set<Contract> contractSet, FacilityType facilityType,
-                    RentType rentType) {
+    public Facility(Integer facilityId, String facilityName, String are, String cost, String maxPeople, String standardRoom, String descriptionOtherConvenience, String poolArea, String numberOfFloors, String facilityFree, Boolean isDelete, Set<Contract> contractSet, FacilityType facilityType, RentType rentType) {
         this.facilityId = facilityId;
+        this.facilityName = facilityName;
         this.are = are;
         this.cost = cost;
         this.maxPeople = maxPeople;
         this.standardRoom = standardRoom;
-        this.descriptionOtherConvernience = descriptionOtherConvernience;
+        this.descriptionOtherConvenience = descriptionOtherConvenience;
         this.poolArea = poolArea;
         this.numberOfFloors = numberOfFloors;
         this.facilityFree = facilityFree;
@@ -63,35 +63,43 @@ public class Facility {
         this.rentType = rentType;
     }
 
-    public int getFacilityId() {
+    public Integer getFacilityId() {
         return facilityId;
     }
 
-    public void setFacilityId(int facilityId) {
+    public void setFacilityId(Integer facilityId) {
         this.facilityId = facilityId;
     }
 
-    public int getAre() {
+    public String getFacilityName() {
+        return facilityName;
+    }
+
+    public void setFacilityName(String facilityName) {
+        this.facilityName = facilityName;
+    }
+
+    public String getAre() {
         return are;
     }
 
-    public void setAre(int are) {
+    public void setAre(String are) {
         this.are = are;
     }
 
-    public Double getCost() {
+    public String getCost() {
         return cost;
     }
 
-    public void setCost(Double cost) {
+    public void setCost(String cost) {
         this.cost = cost;
     }
 
-    public int getMaxPeople() {
+    public String getMaxPeople() {
         return maxPeople;
     }
 
-    public void setMaxPeople(int maxPeople) {
+    public void setMaxPeople(String maxPeople) {
         this.maxPeople = maxPeople;
     }
 
@@ -103,27 +111,35 @@ public class Facility {
         this.standardRoom = standardRoom;
     }
 
-    public String getDescriptionOtherConvernience() {
-        return descriptionOtherConvernience;
+    public String getDescriptionOtherConvenience() {
+        return descriptionOtherConvenience;
     }
 
-    public void setDescriptionOtherConvernience(String descriptionOtherConvernience) {
-        this.descriptionOtherConvernience = descriptionOtherConvernience;
+    public void setDescriptionOtherConvenience(String descriptionOtherConvenience) {
+        this.descriptionOtherConvenience = descriptionOtherConvenience;
     }
 
-    public Double getPoolArea() {
+    public Boolean getDelete() {
+        return isDelete;
+    }
+
+    public void setDelete(Boolean delete) {
+        isDelete = delete;
+    }
+
+    public String getPoolArea() {
         return poolArea;
     }
 
-    public void setPoolArea(Double poolArea) {
+    public void setPoolArea(String poolArea) {
         this.poolArea = poolArea;
     }
 
-    public int getNumberOfFloors() {
+    public String getNumberOfFloors() {
         return numberOfFloors;
     }
 
-    public void setNumberOfFloors(int numberOfFloors) {
+    public void setNumberOfFloors(String numberOfFloors) {
         this.numberOfFloors = numberOfFloors;
     }
 
@@ -141,14 +157,6 @@ public class Facility {
 
     public void setContractSet(Set<Contract> contractSet) {
         this.contractSet = contractSet;
-    }
-
-    public String getIsDelete() {
-        return isDelete;
-    }
-
-    public void setIsDelete(String isDelete) {
-        this.isDelete = isDelete;
     }
 
     public FacilityType getFacilityType() {

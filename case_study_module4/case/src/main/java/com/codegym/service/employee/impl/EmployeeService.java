@@ -1,4 +1,6 @@
 package com.codegym.service.employee.impl;
 
-public class EmployeeService {
+import com.codegym.service.employee.IEmployeeService;
+
+public class EmployeeService implements IEmployeeService {
 }

@@ -10,7 +10,7 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int employeeId;
+    private Integer employeeId;
 
     private String employeeName;
 
@@ -25,6 +25,8 @@ public class Employee {
     private String employeeEmail;
 
     private String employeeAddress;
+
+    private boolean isDelete;
 
     @OneToMany(mappedBy = "employee")
     private Set<Contract> contractSet;
@@ -44,7 +46,9 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(int employeeId, String employeeName, String employeeBirthday, String employeeIdCard, String salary, String employeePhone, String employeeEmail, String employeeAddress, Set<Contract> contractSet, Division division, Position position, EducationDegree educationDegree) {
+    public Employee(int employeeId, String employeeName, String employeeBirthday, String employeeIdCard,
+                    String salary, String employeePhone, String employeeEmail, String employeeAddress, boolean isDelete,
+                    Set<Contract> contractSet, Division division, Position position, EducationDegree educationDegree) {
         this.employeeId = employeeId;
         this.employeeName = employeeName;
         this.employeeBirthday = employeeBirthday;
@@ -53,6 +57,7 @@ public class Employee {
         this.employeePhone = employeePhone;
         this.employeeEmail = employeeEmail;
         this.employeeAddress = employeeAddress;
+        this.isDelete = isDelete;
         this.contractSet = contractSet;
         this.division = division;
         this.position = position;
@@ -153,5 +158,13 @@ public class Employee {
 
     public void setEducationDegree(EducationDegree educationDegree) {
         this.educationDegree = educationDegree;
+    }
+
+    public boolean isDelete() {
+        return isDelete;
+    }
+
+    public void setDelete(boolean delete) {
+        isDelete = delete;
     }
 }

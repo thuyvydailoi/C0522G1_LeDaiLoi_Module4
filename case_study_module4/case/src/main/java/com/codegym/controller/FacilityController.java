@@ -1,12 +1,15 @@
 package com.codegym.controller;
 
-import com.codegym.dto.CustomerDto;
-import com.codegym.model.customer.Customer;
-import com.codegym.model.customer.CustomerType;
-import com.codegym.service.customer.ICustomerService;
-import com.codegym.service.customer.ICustomerTypeService;
+import com.codegym.dto.FacilityDto;
+import com.codegym.model.facility.Facility;
+import com.codegym.model.facility.FacilityType;
+import com.codegym.model.facility.RentType;
+import com.codegym.service.facility.IFacilityService;
+import com.codegym.service.facility.IFacilityTypeService;
+import com.codegym.service.facility.IRentTypeService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
@@ -18,89 +21,87 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 
+@RequestMapping("/facility")
 @Controller
 public class FacilityController {
     @Autowired
-    private ICustomerService iCustomerService;
+    private IFacilityService facilityService;
 
     @Autowired
-    private ICustomerTypeService iCustomerTypeService;
+    private IFacilityTypeService facilityTypeService;
+
+    @Autowired
+    private IRentTypeService rentTypeService;
 
     @GetMapping("/list")
     public String showList(@PageableDefault(value = 5) Pageable pageable,
-                           @RequestParam(value = "nameSearch", defaultValue = "") String nameSearch,
-                           @RequestParam(value = "addressSearch", defaultValue = "") String addressSearch,
-                           @RequestParam(value = "phoneSearch", defaultValue = "") String phoneSearch,
-                           Model model) {
-        List<Customer> customerList = iCustomerService.findAll();
-        for (Customer customer : customerList) {
-            if (customer.getCustomerBirthday().contains("-")) {
-                String[] arr = customer.getCustomerBirthday().split("-");
-                customer.setCustomerBirthday(arr[2] + "/" + arr[1] + "/" + arr[0]);
-            }
-        }
-
-        model.addAttribute("customerList", iCustomerService.searchCustomer(nameSearch, addressSearch,
-                phoneSearch, pageable));
-        model.addAttribute("customerTypeList", iCustomerTypeService.findAll());
+                           @RequestParam(value = "nameSearch", defaultValue = "") String nameSearch, Model model) {
+        List<FacilityType> facilityTypeList = facilityTypeService.findAll();
+        List<RentType> rentTypeList = rentTypeService.findAll();
+        Page<Facility> facilityList = facilityService.searchFacility(nameSearch, pageable);
         model.addAttribute("nameSearch", nameSearch);
-        model.addAttribute("addressSearch", addressSearch);
-        model.addAttribute("phoneSearch", phoneSearch);
-
-        return "/customer/index";
+        model.addAttribute("facilityList", facilityList);
+        model.addAttribute("facilityTypeList", facilityTypeList);
+        model.addAttribute("rentTypeList", rentTypeList);
+        return "facility/index";
     }
 
     @GetMapping("/create")
-    public String create(Model model) {
-        List<CustomerType> customerTypeList = iCustomerTypeService.findAll();
-        model.addAttribute("customerDto", new CustomerDto());
-        model.addAttribute("customerTypeList", customerTypeList);
-        return "/customer/create";
+    public String showFormCreate(Model model) {
+        model.addAttribute("facilityTypeList", facilityTypeService.findAll());
+        model.addAttribute("rentTypeList", rentTypeService.findAll());
+        model.addAttribute("facilityDto", new FacilityDto());
+        return "facility/create";
     }
 
     @PostMapping("/save")
-    public String save(@ModelAttribute @Validated CustomerDto customerDto, BindingResult bindingResult,
-                       RedirectAttributes redirectAttributes, Model model) {
+    public String save(@ModelAttribute @Validated FacilityDto facilityDto, BindingResult bindingResult,
+                       RedirectAttributes redirectAttributes,Model model) {
+
         if (bindingResult.hasFieldErrors()) {
-            //Kiểm tra lỗi trả về create và ngược lại
-            List<CustomerType> customerTypes = iCustomerTypeService.findAll();
-            model.addAttribute("customerTypes",customerTypes);
-            return "customer/create";
+            List<FacilityType> facilityTypeList = facilityTypeService.findAll();
+            List<RentType> rentTypeList = rentTypeService.findAll();
+            model.addAttribute("facilityTypeList",facilityTypeList);
+            model.addAttribute("rentTypeList",rentTypeList);
+            return "facility/create";
         } else {
-            Customer customer = new Customer();
-            BeanUtils.copyProperties(customerDto, customer);
-            iCustomerService.save(customer);
-            redirectAttributes.addFlashAttribute("mess", customer.getCustomerName() + "thành công");
-            return "redirect:/customer/list";
+            Facility facility = new Facility();
+            BeanUtils.copyProperties(facilityDto, facility);
+            facilityService.save(facility);
+            redirectAttributes.addFlashAttribute("mess", facility.getFacilityName() + " " +
+                    "success");
+            return "redirect:/facility/list";
         }
     }
 
-    @GetMapping("/update/{id}")
-    public String edit(@PathVariable int id, Model model) {
-        List<CustomerType> customerTypes = iCustomerTypeService.findAll();
-        model.addAttribute("customer", iCustomerService.findById(id));
-        model.addAttribute("customerTypeList",customerTypes);
-        return "customer/edit";
+    @GetMapping("/delete")
+    public String delete(@RequestParam(value = "idDelete") Integer id, RedirectAttributes redirectAttributes) {
+        facilityService.deleteLogical(id);
+        redirectAttributes.addFlashAttribute("mess", "xóa khách hàng" +
+                facilityService.findById(id).get().getFacilityName() + " thành công");
+        return "redirect:/facility/list";
+    }
+
+    @GetMapping("/edit/{id}")
+    public String showFormEdit(@PathVariable Integer id, Model model) {
+
+        model.addAttribute("rentTypeList", rentTypeService.findAll());
+        model.addAttribute("facilityTypeList", facilityTypeService.findAll());
+        model.addAttribute("facilityDto", facilityService.findById(id).get());
+        return "facility/edit";
     }
 
     @PostMapping("/update")
-    public String update(@ModelAttribute Customer customer,
-                         Model model) {
-        iCustomerService.save(customer);
-        return "redirect:/customer/list";
-    }
-
-
-    @GetMapping("/delete/{id}")
-    public String showDelete(@PathVariable int id, Model model) {
-        model.addAttribute("customer", iCustomerService.findById(id));
-        return "customer/index";
-    }
-
-    @GetMapping ("/delete")
-    public String delete(@RequestParam(value = "idDelete") Integer id, RedirectAttributes redirect) {
-        iCustomerService.delete(id);
-        redirect.addFlashAttribute("success", "Removed customer successfully!");
-        return "redirect:/customer/list";
+    public String update(@ModelAttribute @Validated FacilityDto facilityDto, BindingResult bindingResult,
+                         RedirectAttributes redirectAttributes, Model model) {
+        if (bindingResult.hasFieldErrors()) {
+            return "facility/edit";
+        } else {
+            Facility facility = new Facility();
+            BeanUtils.copyProperties(facilityDto, facility);
+            facilityService.update(facility);
+            redirectAttributes.addFlashAttribute("message", "Chỉnh sửa khách hàng thành công!");
+            return "redirect:/facility/list";
+        }
     }
 }

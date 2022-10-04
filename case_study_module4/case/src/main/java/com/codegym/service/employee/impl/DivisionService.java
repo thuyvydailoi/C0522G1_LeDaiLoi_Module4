@@ -1,4 +1,6 @@
 package com.codegym.service.employee.impl;
 
-public class DivisionService {
+import com.codegym.service.employee.IDivisionService;
+
+public class DivisionService implements IDivisionService {
 }
