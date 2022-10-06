@@ -27,7 +27,7 @@
 <body>
 <div th:replace="~{/home::header}"></div>
 <div class="p-3">
-    <h2 class="text-center fw-bold">FACILITY LIST</h2>
+    <h2 class="text-center fw-bold text-dark">FACILITY LIST</h2>
 
     <div th:if="${mess}">
         <div class="justify-content-center d-flex">
@@ -47,7 +47,7 @@
                 </button>
             </a>
 
-            <form class="d-flex my-2" role="search" th:action="@{/facility/list}">
+            <form class="d-flex my-2" role="search" th:action="@{/facility/index}">
                 <input class="form-control me-2" type="text" placeholder="Search name" aria-label="Search"
                        name="nameSearch">
 
@@ -66,7 +66,6 @@
             <th>Facility Name</th>
             <th>Area</th>
             <th>Price</th>
-            <th>People Number</th>
             <th>Pool Area</th>
             <th>Facility Free</th>
             <th>Rent Type</th>
@@ -81,7 +80,7 @@
             <td th:text="${facility.facilityName}"></td>
             <td th:text="${facility.are}"></td>
             <td th:text="${facility.cost}"></td>
-            <td th:text="${facility.maxPeople}"></td>
+<!--            <td th:text="${facility.maxPeople}"></td>-->
             <td th:text="${facility.poolArea}"></td>
             <td th:if="${facility.facilityId}" th:text="${facility.facilityType.facilityTypeName}"></td>
             <td th:unless="${facility.facilityType}"></td>
@@ -216,12 +215,49 @@
     </div>
 </div>
 <div>
-    <a th:href="@{'/facility/list'(page=${facilityList.number - 1}, nameSearch=${nameSearch})}"
-       th:if="${facilityList.hasPrevious()}">Previous</a>
-    <span th:text="${facilityList.number + 1}"></span>/
-    <span th:text="${facilityList.totalPages }"></span>
-    <a th:href="@{'/facility/list'(page=${facilityList.number + 1},nameSearch=${nameSearch})}"
-       th:if="${facilityList.hasNext()}">Next</a>
+<!--    <a th:href="@{'/facility/list'(page=${facilityList.number - 1}, nameSearch=${nameSearch})}"-->
+<!--       th:if="${facilityList.hasPrevious()}">Previous</a>-->
+<!--    <span th:text="${facilityList.number + 1}"></span>/-->
+<!--    <span th:text="${facilityList.totalPages }"></span>-->
+<!--    <a th:href="@{'/facility/list'(page=${facilityList.number + 1},nameSearch=${nameSearch})}"-->
+<!--       th:if="${facilityList.hasNext()}">Next</a>-->
+    <nav aria-label="...">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" th:href="@{'/facility/list'(page=${facilityList.number - 1}, nameSearch=${nameSearch})}"
+                   th:if="${facilityList.hasPrevious()}">
+                    &laquo;</a>
+            </li>
+            <li class="page-item disabled" th:unless="${facilityList.hasPrevious()}">
+                <a class="page-link">&laquo;</a>
+            </li>
+
+            <li class="page-item"><a class="page-link" th:href="@{'/facility/list'(page=${facilityList.number - 1},
+            nameSearch=${nameSearch})}" th:if="${facilityList.hasPrevious()}">
+            </a>
+            </li>
+
+            <li class="page-item active">
+                <a class="page-link" th:href="@{'/facility/list'(page=${facilityList.number}, nameSearch=${nameSearch}
+                )}" th:text="${facilityList.number + 1}">
+                    <span class="sr-only">(trang hiện tại)</span></a>
+            </li>
+
+            <li class="page-item"><a class="page-link" th:href="@{'/facility/list'(page=${facilityList.number + 1},
+            nameSearch=${nameSearch})}"
+                                     th:if="${facilityList.hasNext()}" th:text="${facilityList.number + 2}"></a>
+            </li>
+
+            <li class="page-item">
+                <a class="page-link" th:href="@{'/facility/list'(page=${facilityList.number + 1}, nameSearch=${nameSearch}
+               )}"
+                   th:if="${facilityList.hasNext()}">&raquo;</a>
+            </li>
+            <li class="page-item disabled" th:unless="${facilityList.hasNext()}">
+                <a class="page-link">&raquo;</a>
+            </li>
+        </ul>
+    </nav>
 </div>
 <!--<a th:href="@{/}"><i class="fa-solid fa-house-chimney h5 mx-1"></i> Back to HOME</a>-->
 </div>

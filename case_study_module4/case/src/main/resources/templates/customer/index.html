@@ -10,9 +10,8 @@
 </head>
 <body>
 <div th:replace="~{/home::header}"></div>
-
 <div class="p-3">
-    <h2 class="text-center fw-bold text-light my-3">Customer List</h2>
+    <h2 class="text-center fw-bold text-dark my-3">CUSTOMER LIST</h2>
     <div th:if="${mess}">
         <div class="justify-content-center d-flex">
             <div class="alert alert-success alert-dismissible fade show w-50 text-center">
@@ -31,7 +30,7 @@
                 </button>
             </a>
 
-            <form class="d-flex my-2" role="search" th:action="@{/customer/search}">
+            <form class="d-flex my-2" role="search" action="/customer/list">
                 <input class="form-control me-2" type="text" placeholder="Input name" aria-label="Search"
                        name="nameSearch">
 
@@ -107,7 +106,7 @@
     <nav aria-label="...">
         <ul class="pagination">
             <li class="page-item">
-                <a class="page-link" th:href="@{'/customer'(page=${customerList.number - 1}, nameSearch=${nameSearch},
+                <a class="page-link" th:href="@{'/customer/list'(page=${customerList.number - 1}, nameSearch=${nameSearch},
                 phoneSearch=${phoneSearch}, addressSearch=${addressSearch})}" th:if="${customerList.hasPrevious()}">
                     &laquo;</a>
             </li>
@@ -242,8 +241,6 @@
             document.getElementById("gender").innerText = "Nam";
         } else if (gender == 1) {
             document.getElementById("gender").innerText = "Nữ";
-        } else {
-            document.getElementById("gender").innerText = "LGBT";
         }
         document.getElementById("idCard").innerText = idCard;
         document.getElementById("phone").innerText = phone;

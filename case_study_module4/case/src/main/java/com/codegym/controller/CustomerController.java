@@ -71,7 +71,7 @@ public class CustomerController {
             Customer customer = new Customer();
             BeanUtils.copyProperties(customerDto, customer);
             iCustomerService.save(customer);
-            redirectAttributes.addFlashAttribute("mess", customer.getCustomerName() + "thành công");
+            redirectAttributes.addFlashAttribute("mess","Add " + customer.getCustomerName() + "successfully");
             return "redirect:/customer/list";
         }
     }
@@ -85,9 +85,10 @@ public class CustomerController {
     }
 
     @PostMapping("/update")
-    public String update(@ModelAttribute Customer customer,
-                         Model model) {
+    public String update(@ModelAttribute Customer customer, RedirectAttributes redirectAttributes
+                          ) {
      iCustomerService.save(customer);
+        redirectAttributes.addFlashAttribute("mess", "Update customer successfully!");
         return "redirect:/customer/list";
     }
 
@@ -101,7 +102,7 @@ public class CustomerController {
     @GetMapping ("/delete")
     public String delete(@RequestParam(value = "idDelete") Integer id, RedirectAttributes redirect) {
         iCustomerService.delete(id);
-        redirect.addFlashAttribute("success", "Removed customer successfully!");
+        redirect.addFlashAttribute("mess", "Removed customer successfully!");
         return "redirect:/customer/list";
     }
 //

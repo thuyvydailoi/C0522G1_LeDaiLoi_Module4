@@ -30,7 +30,7 @@ public class Facility {
 
     private String facilityFree;
 
-    private Boolean isDelete = false    ;
+    private Boolean isDelete = false;
 
     @OneToMany(mappedBy = "facility")
     private Set<Contract> contractSet;

@@ -8,25 +8,15 @@ import java.util.Set;
 
 public class FacilityDto {
     private Integer facilityId;
-
     private String facilityName;
-
     private String are;
-
     private String cost;
-
     private String maxPeople;
-
     private String standardRoom;
-
     private String descriptionOtherConvenience;
-
     private String poolArea;
-
     private String numberOfFloors;
-
     private String facilityFree;
-
     private Set<Contract> contractSet;
 
     private FacilityType facilityType;

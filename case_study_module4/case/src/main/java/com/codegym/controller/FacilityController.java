@@ -56,34 +56,35 @@ public class FacilityController {
 
     @PostMapping("/save")
     public String save(@ModelAttribute @Validated FacilityDto facilityDto, BindingResult bindingResult,
-                       RedirectAttributes redirectAttributes,Model model) {
+                       RedirectAttributes redirectAttributes, Model model) {
 
         if (bindingResult.hasFieldErrors()) {
             List<FacilityType> facilityTypeList = facilityTypeService.findAll();
             List<RentType> rentTypeList = rentTypeService.findAll();
-            model.addAttribute("facilityTypeList",facilityTypeList);
-            model.addAttribute("rentTypeList",rentTypeList);
+            model.addAttribute("facilityTypeList", facilityTypeList);
+            model.addAttribute("rentTypeList", rentTypeList);
             return "facility/create";
         } else {
             Facility facility = new Facility();
             BeanUtils.copyProperties(facilityDto, facility);
             facilityService.save(facility);
-            redirectAttributes.addFlashAttribute("mess", facility.getFacilityName() + " " +
-                    "success");
+            redirectAttributes.addFlashAttribute("mess", "Add " + facility.getFacilityName() +
+                    " successfully");
             return "redirect:/facility/list";
+
         }
     }
 
     @GetMapping("/delete")
     public String delete(@RequestParam(value = "idDelete") Integer id, RedirectAttributes redirectAttributes) {
         facilityService.deleteLogical(id);
-        redirectAttributes.addFlashAttribute("mess", "xóa khách hàng" +
-                facilityService.findById(id).get().getFacilityName() + " thành công");
+        redirectAttributes.addFlashAttribute("mess", "delete success " +
+                facilityService.findById(id).get().getFacilityName() + " success");
         return "redirect:/facility/list";
     }
 
     @GetMapping("/edit/{id}")
-    public String showFormEdit(@PathVariable Integer id, Model model) {
+    public String showFormEdit(@PathVariable Integer id, Model model ) {
         FacilityDto facilityDto = new FacilityDto();
         BeanUtils.copyProperties(facilityService.findById(id).get(), facilityDto);
         model.addAttribute("rentTypeList", rentTypeService.findAll());
@@ -94,14 +95,14 @@ public class FacilityController {
 
     @PostMapping("/update")
     public String update(@ModelAttribute @Validated FacilityDto facilityDto, BindingResult bindingResult,
-                         RedirectAttributes redirectAttributes, Model model) {
+                         RedirectAttributes redirectAttributes) {
         if (bindingResult.hasFieldErrors()) {
             return "facility/edit";
         } else {
             Facility facility = new Facility();
             BeanUtils.copyProperties(facilityDto, facility);
             facilityService.update(facility);
-            redirectAttributes.addFlashAttribute("message", "Chỉnh sửa khách hàng thành công!");
+            redirectAttributes.addFlashAttribute("mess", "Update successfully!");
             return "redirect:/facility/list";
         }
     }

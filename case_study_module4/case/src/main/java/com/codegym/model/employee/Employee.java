@@ -11,21 +11,13 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer employeeId;
-
     private String employeeName;
-
     private String employeeBirthday;
-
     private  String employeeIdCard;
-
     private String salary;
-
     private String employeePhone;
-
     private String employeeEmail;
-
     private String employeeAddress;
-
     private boolean isDelete;
 
     @OneToMany(mappedBy = "employee")
@@ -46,9 +38,7 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(int employeeId, String employeeName, String employeeBirthday, String employeeIdCard,
-                    String salary, String employeePhone, String employeeEmail, String employeeAddress, boolean isDelete,
-                    Set<Contract> contractSet, Division division, Position position, EducationDegree educationDegree) {
+    public Employee(Integer employeeId, String employeeName, String employeeBirthday, String employeeIdCard, String salary, String employeePhone, String employeeEmail, String employeeAddress, boolean isDelete, Set<Contract> contractSet, Division division, Position position, EducationDegree educationDegree) {
         this.employeeId = employeeId;
         this.employeeName = employeeName;
         this.employeeBirthday = employeeBirthday;
@@ -64,11 +54,11 @@ public class Employee {
         this.educationDegree = educationDegree;
     }
 
-    public int getEmployeeId() {
+    public Integer getEmployeeId() {
         return employeeId;
     }
 
-    public void setEmployeeId(int employeeId) {
+    public void setEmployeeId(Integer employeeId) {
         this.employeeId = employeeId;
     }
 
@@ -128,6 +118,14 @@ public class Employee {
         this.employeeAddress = employeeAddress;
     }
 
+    public boolean isDelete() {
+        return isDelete;
+    }
+
+    public void setDelete(boolean delete) {
+        isDelete = delete;
+    }
+
     public Set<Contract> getContractSet() {
         return contractSet;
     }
@@ -158,13 +156,5 @@ public class Employee {
 
     public void setEducationDegree(EducationDegree educationDegree) {
         this.educationDegree = educationDegree;
-    }
-
-    public boolean isDelete() {
-        return isDelete;
-    }
-
-    public void setDelete(boolean delete) {
-        isDelete = delete;
     }
 }
