@@ -2,6 +2,7 @@ package com.codegym.dto;
 
 import com.codegym.model.employee.Division;
 import com.codegym.model.employee.EducationDegree;
+import com.codegym.model.employee.Position;
 
 public class EmployeeDto {
     private Integer employeeId;
@@ -14,7 +15,7 @@ public class EmployeeDto {
     private String employeeAddress;
     private boolean isDelete;
     private Division division;
-    private Division position;
+    private Position position;
     private EducationDegree educationDegree;
 
     public Integer getEmployeeId() {
@@ -97,11 +98,11 @@ public class EmployeeDto {
         this.division = division;
     }
 
-    public Division getPosition() {
+    public Position getPosition() {
         return position;
     }
 
-    public void setPostion(Division postion) {
+    public void setPosition(Position position) {
         this.position = position;
     }
 

@@ -12,132 +12,156 @@
 <div th:replace="~{/home::header}"></div>
 <div class="p-3">
     <h2 class="text-center fw-bold text-dark my-3">EMPLOYEE LIST</h2>
-<!--    <div th:if="${mess}">-->
-<!--        <div class="justify-content-center d-flex">-->
-<!--            <div class="alert alert-success alert-dismissible fade show w-50 text-center">-->
-<!--                <strong th:text="${mess}"></strong>-->
-<!--                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>-->
-<!--            </div>-->
-<!--        </div>-->
+    <!--    <div th:if="${mess}">-->
+    <!--        <div class="justify-content-center d-flex">-->
+    <!--            <div class="alert alert-success alert-dismissible fade show w-50 text-center">-->
+    <!--                <strong th:text="${mess}"></strong>-->
+    <!--                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>-->
+    <!--            </div>-->
+    <!--        </div>-->
+</div>
+
+<nav class="navbar navbar-expand-lg py-0 my-0">
+    <div class="container-fluid">
+        <a th:href="@{/employee/create}">
+            <button class="btn btn-primary btn-outline-secondary btn-sm">
+                <span class="fa-solid fa-person-circle-plus text-light h5 my-auto me-1"></span>
+                <span class="text-light">ADD NEW EMPLOYEE</span>
+            </button>
+        </a>
+
+        <form class="d-flex my-2" role="search" action="/employee/list">
+            <input class="form-control me-2" type="text" placeholder="Input name" aria-label="Search"
+                   name="nameSearch">
+
+            <input class="form-control me-2" type="text" placeholder="Input address" aria-label="Search"
+                   name="addressSearch">
+
+            <input class="form-control me-2" type="text" placeholder="Input phone number.." aria-label="Search"
+                   name="phoneSearch">
+            <button class="btn btn-light btn-outline-primary" type="submit" name="action" value="search">
+                <i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
     </div>
+</nav>
+<table class="table table-light table-striped table-bordered">
+    <tr class="table-dark text-light">
+        <th class="text-center"><i class="fa-solid fa-dog"></i></th>
+        <th>Employee Name</th>
+        <th>Date Of Birth</th>
+        <th>Id Card</th>
+        <th>Education</th>
+        <th>Position</th>
+        <th>Devision</th>
+        <th class="text-center">View</th>
+        <th class="text-center">Edit</th>
+        <th class="text-center">Delete</th>
+    </tr>
 
-    <nav class="navbar navbar-expand-lg py-0 my-0">
-        <div class="container-fluid">
-            <a th:href="@{/employee/create}">
-                <button class="btn btn-primary btn-outline-secondary btn-sm">
-                    <span class="fa-solid fa-person-circle-plus text-light h5 my-auto me-1"></span>
-                    <span class="text-light">ADD NEW EMPLOYEE</span>
-                </button>
-            </a>
+    <tr th:each="employee, status : ${employeeList}">
+        <!--            <td class="text-center" th:text="${status.count + employeeList.number * 5}"></td>-->
 
-            <form class="d-flex my-2" role="search" action="/employee">
-                <input class="form-control me-2" type="text" placeholder="Input name" aria-label="Search"
-                       name="nameSearch">
+        <td th:text="${employee.employeeName}"></td>
 
-                <input class="form-control me-2" type="text" placeholder="Input address" aria-label="Search"
-                       name="addressSearch">
-
-                <input class="form-control me-2" type="text" placeholder="Input phone number.." aria-label="Search"
-                       name="phoneSearch">
-                <button class="btn btn-light btn-outline-primary" type="submit" name="action" value="search">
-                    <i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-        </div>
-    </nav>
-    <table class="table table-light table-striped table-bordered">
-        <tr class="table-dark text-light">
-            <th class="text-center"><i class="fa-solid fa-dog"></i></th>
-            <th>Employee Name</th>
-            <th>Date Of Birth</th>
-            <th>Id Card</th>
-            <th>Education</th>
-            <th>Position</th>
-            <th>Devision</th>
-            <th class="text-center">View</th>
-            <th class="text-center">Edit</th>
-            <th class="text-center">Delete</th>
-        </tr>
-
-        <tr th:each="employee, status : ${employeeList}">
-            <td class="text-center" th:text="${status.count + employeeList.number * 5}"></td>
-
-            <td th:text="${employee.employeeName}"></td>
-
-            <td th:text="${employee.employeeBirthday}"></td>
+        <td th:text="${employee.employeeBirthday}"></td>
 
 
-            <td th:text="${employee.employeeIdCard}"></td>
+        <td th:text="${employee.employeeIdCard}"></td>
 
-            <td th:text="${employee.educationDegree.educationName}"></td>
+        <td th:text="${employee.educationDegree.educationName}"></td>
 
-            <td th:text="${employee.position.positionName}"></td>
-            <td th:text="${employee.division.divisionName}"></td>
+        <td th:text="${employee.position.positionName}"></td>
+        <td th:text="${employee.division.divisionName}"></td>
 
-            <td class="text-center">
-                <button th:attr="onclick=|viewEmployee('${employee.customerName}',
+        <td class="text-center">
+            <button th:attr="onclick=|viewEmployee('${employee.employeeName}',
                   '${employee.employeeBirthday}',
                   '${employee.employeeIdCard}',
-                  '${employee.educationDregee.educationName}'
+                  '${employee.educationDegree.educationName}'
                   '${employee.position.positionName}',
                   '${employee.division.divisionName}')|"
-                        class="btn btn-warning btn-outline-secondary btn-sm" data-bs-toggle="modal"
-                        data-bs-target="#viewCustomer">
-                    <span class="fa-solid fa-user text-light h6 m-auto px-2"></span>
-                </button>
-            </td>
+                    class="btn btn-warning btn-outline-secondary btn-sm" data-bs-toggle="modal"
+                    data-bs-target="#viewCustomer">
+                <span class="fa-solid fa-user text-light h6 m-auto px-2"></span>
+            </button>
+        </td>
 
-            <td class="text-center">
-                <button class="btn btn-success btn-outline-secondary btn-sm">
-                    <span class="fa-solid fa-user-pen text-light h6 m-auto px-2"></span>
-                </button>
-                </a>
-            </td>
+        <td class="text-center">
+            <button class="btn btn-success btn-outline-secondary btn-sm">
+                <span class="fa-solid fa-user-pen text-light h6 m-auto px-2"></span>
+            </button>
+            </a>
+        </td>
 
-            <td class="text-center">
-                <button class="btn btn-danger btn-outline-secondary btn-sm" data-bs-toggle="modal">
-                    <span class="fa-solid fa-person-circle-minus text-light h6 m-auto px-2"></span>
-                </button>
-            </td>
-        </tr>
-    </table>
+        <td class="text-center">
+            <button class="btn btn-danger btn-outline-secondary btn-sm" data-bs-toggle="modal">
+                <span class="fa-solid fa-person-circle-minus text-light h6 m-auto px-2"></span>
+            </button>
+        </td>
+    </tr>
+</table>
 
-    <nav aria-label="...">
-        <ul class="pagination">
-            <li class="page-item">
-                <a class="page-link" th:href="@{'/employee/list'(page=${employeeList.number - 1}, nameSearch=${nameSearch},
-                phoneSearch=${phoneSearch}, addressSearch=${addressSearch})}" th:if="${employeeList.hasPrevious()}">
-                    &laquo;</a>
-            </li>
-            <li class="page-item disabled" th:unless="${employeeList.hasPrevious()}">
-                <a class="page-link">&laquo;</a>
-            </li>
+<!--<nav aria-label="...">-->
+<!--    <ul class="pagination">-->
+<!--        <li class="page-item">-->
+<!--            <a class="page-link" th:href="@{'/employee/list'(page=${employeeList.number - 1}, nameSearch=${nameSearch},-->
+<!--                phoneSearch=${phoneSearch}, addressSearch=${addressSearch})}" th:if="${employeeList.hasPrevious()}">-->
+<!--                &laquo;</a>-->
+<!--        </li>-->
+<!--        <li class="page-item disabled" th:unless="${employeeList.hasPrevious()}">-->
+<!--            <a class="page-link">&laquo;</a>-->
+<!--        </li>-->
 
-            <li class="page-item"><a class="page-link" th:href="@{'/employee/list'(page=${educationDegreeList.number - 1},
-            nameSearch=${nameSearch}, phoneSearch=${phoneSearch}, addressSearch=${addressSearch})}"
-                                     th:if="${employeeList.hasPrevious()}" th:text="${employeeList.number}"></a></li>
+<!--        <li class="page-item"><a class="page-link" th:href="@{'/employee/list'(page=${employeeList.number - 1},-->
+<!--            nameSearch=${nameSearch}, phoneSearch=${phoneSearch}, addressSearch=${addressSearch})}"-->
+<!--                                 th:if="${employeeList.hasPrevious()}" th:text="${employeeList.number}"></a></li>-->
 
-            <li class="page-item active">
-                <a class="page-link" th:href="@{'/employee/list'(page=${employeeList.number}, nameSearch=${nameSearch},
-                phoneSearch=${phoneSearch}, addressSearch=${addressSearch})}" th:text="${employeeList.number + 1}">
-                    <span class="sr-only">(Page now)</span></a>
-            </li>
+<!--        <li class="page-item active">-->
+<!--            <a class="page-link" th:href="@{'/employee/list'(page=${employeeList.number}, nameSearch=${nameSearch},-->
+<!--                phoneSearch=${phoneSearch}, addressSearch=${addressSearch})}" th:text="${employeeList.number + 1}">-->
+<!--                <span class="sr-only">(Page now)</span></a>-->
+<!--        </li>-->
 
-            <li class="page-item"><a class="page-link" th:href="@{'/employee/list'(page=${employeeList.number + 1},
-            nameSearch=${nameSearch}, phoneSearch=${phoneSearch}, addressSearch=${addressSearch})}"
-                                     th:if="${employeeList.hasNext()}" th:text="${employeeList.number + 2}"></a>
-            </li>
+<!--        <li class="page-item"><a class="page-link" th:href="@{'/employee/list'(page=${employeeList.number + 1},-->
+<!--            nameSearch=${nameSearch}, phoneSearch=${phoneSearch}, addressSearch=${addressSearch})}"-->
+<!--                                 th:if="${employeeList.hasNext()}" th:text="${employeeList.number + 2}"></a>-->
+<!--        </li>-->
 
-            <li class="page-item">
-                <a class="page-link" th:href="@{'/eployee/list'(page=${employeeList.number + 1}, nameSearch=${nameSearch},
-                phoneSearch=${phoneSearch}, addressSearch=${addressSearch})}"
-                   th:if="${employeeList.hasNext()}">&raquo;</a>
-            </li>
-            <li class="page-item disabled" th:unless="${employeeList.hasNext()}">
-                <a class="page-link">&raquo;</a>
-            </li>
-        </ul>
-    </nav>
+<!--        <li class="page-item">-->
+<!--            <a class="page-link" th:href="@{'/eployee/list'(page=${employeeList.number + 1}, nameSearch=${nameSearch},-->
+<!--                phoneSearch=${phoneSearch}, addressSearch=${addressSearch})}"-->
+<!--               th:if="${employeeList.hasNext()}">&raquo;</a>-->
+<!--        </li>-->
+<!--        <li class="page-item disabled" th:unless="${employeeList.hasNext()}">-->
+<!--            <a class="page-link">&raquo;</a>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--</nav>-->
 </div>
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item">
+            <a class="page-link" th:href="@{'/employee/list'(page=${employeeList.number - 1}, nameSearch=${nameSearch},
+                addressSearch=${addressSearch},phoneSearch=${phoneSearch})}" th:if="${employeeList.hasPrevious()}" aria-label="Previous">
+                <span aria-hidden="true"> &laquo; Previous</span>
+            </a>
+        </li>
+        <li class="page-item"><a class="page-link" th:text="${employeeList.number }"
+                                 th:href="@{'/employee/list'(page=${employeeList.number - 1}, nameSearch=${nameSearch}, addressSearch=${addressSearch},
+                phoneSearch=${phoneSearch})}"th:if="${employeeList.hasPrevious()}" ></a></li>
+        <li class="page-item"><a class="page-link" th:text="${employeeList.number + 1}"></a></li>
+        <li class="page-item"><a class="page-link" th:text="${employeeList.number + 2}"
+                                 th:href="@{'/employee/list'(page=${employeeList.number + 1},nameSearch=${nameSearch},addressSearch=${addressSearch},
+                phoneSearch=${phoneSearch})}" th:if="${employeeList.hasNext()}" ></a></li>
+        <li class="page-item">
+            <a class="page-link" th:href="@{'/employee/list'(page=${employeeList.number + 1},nameSearch=${nameSearch},addressSearch=${addressSearch},
+                phoneSearch=${phoneSearch})}" th:if="${employeeList.hasNext()}" aria-label="Next">
+                <span aria-hidden="true">Next &raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav>
 
 
 <!--<div class="modal fade" id="deleteEmployee" tabindex="-1" aria-labelledby="exampleModalLabel1"-->
@@ -215,29 +239,32 @@
     </div>
 </div>
 
-<!--<script>-->
-<!--    // function deleteCustomer(id, name) {-->
-<!--    //     document.getElementById("idDelete").value = id;-->
-<!--    //     document.getElementById("nameDelete").innerText = name;-->
-<!--    //     debugger-->
-<!--    // }-->
-<!--    //-->
-<!--    // function viewCustomer(name, birthday, gender, idCard, phone, email, address, type) {-->
-<!--    //     document.getElementById("name").innerText = name;-->
-<!--    //     document.getElementById("birthday").innerText = birthday;-->
-<!--    //     if (gender == 0) {-->
-<!--    //         document.getElementById("gender").innerText = "Nam";-->
-<!--    //     } else if (gender == 1) {-->
-<!--    //         document.getElementById("gender").innerText = "Nữ";-->
-<!--    //     }-->
-<!--    //     document.getElementById("idCard").innerText = idCard;-->
-<!--    //     document.getElementById("phone").innerText = phone;-->
-<!--    //     document.getElementById("email").innerText = email;-->
-<!--    //     document.getElementById("address").innerText = address;-->
-<!--    //     document.getElementById("type").innerText = type;-->
-<!--    //     debugger-->
-<!--    // }-->
-<!--</script>-->
+<script>
+    // function deleteCustomer(id, name)
+    //
+    // document.getElementById("idDelete").value = id;
+    // document.getElementById("nameDelete").innerText = name;
+    // debugger
+
+
+    function viewCustomer(name, birthday, gender, idCard, phone, email, address, type) {
+        document.getElementById("name").innerText = name
+        document.getElementById("birthday").innerText = birthday;
+        if (gender == 0) {
+
+            document.getElementById("gender").innerText = "Nam";
+        } else if (gender == 1) {
+
+            document.getElementById("gender").innerText = "Nữ";
+        }
+        document.getElementById("idCard").innerText = idCard;
+        document.getElementById("phone").innerText = phone;
+        document.getElementById("email").innerText = email;
+        document.getElementById("address").innerText = address;
+        document.getElementById("type").innerText = type;
+        debugger
+    }
+</script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"

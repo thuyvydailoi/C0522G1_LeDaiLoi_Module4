@@ -38,6 +38,8 @@ public class Employee {
     public Employee() {
     }
 
+
+
     public Employee(Integer employeeId, String employeeName, String employeeBirthday, String employeeIdCard, String salary, String employeePhone, String employeeEmail, String employeeAddress, boolean isDelete, Set<Contract> contractSet, Division division, Position position, EducationDegree educationDegree) {
         this.employeeId = employeeId;
         this.employeeName = employeeName;

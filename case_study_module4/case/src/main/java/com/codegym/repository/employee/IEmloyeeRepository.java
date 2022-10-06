@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 public interface IEmloyeeRepository extends JpaRepository<Employee, Integer> {
     @Query(value = "select * from employee where employee_name like %:nameSearch% " +
             "and employee_address like %:addressSearch%" +
-            " and employee_phone like %:phoneSearch% and delete_status = 0" , nativeQuery = true)
+            " and employee_phone like %:phoneSearch% and is_delete= false" , nativeQuery = true)
     Page<Employee> searchEmployee(@Param("nameSearch") String nameSearch,
                                   @Param("addressSearch") String addressSearch,
                                   @Param("phoneSearch") String phoneSearch,
