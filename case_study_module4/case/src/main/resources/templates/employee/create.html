@@ -26,49 +26,80 @@
               method="post">
             <div class="form-group">
                 <label for="name" class="h6">Employee Name:</label>
+
+                <div>
+                    <input type="text" id="name" class="form-control" placeholder="Input name: " name="name"
+                           th:field="*{employeeName}">
+                </div>
+
                 <p style="color: red" th:if="${#fields.hasErrors('employeeName')}" th:errors="*{employeeName}"></p>
-                <input type="text" id="name" class="form-control" placeholder="Input name: " name="name"
-                       th:field="*{employeeName}">
+
             </div>
 
             <div class="mt-3 form-group">
                 <label for="dateOfBirth" class="h6">Date Of Birth:</label>
+                <div>
                 <input type="date" id="dateOfBirth" class="form-control" th:field="*{employeeBirthday}"/>
+
+                </div>
+                <p style="color: red" th:if="${#fields.hasErrors('employeeBirthday')}" th:errors="*{employeeBirthday}"></p>
+
             </div>
 
             <div class="mt-3 form-group">
-                <label for="idCard" class="h6">Id Card:</label>
-                <p style="color: red" th:if="${#fields.hasErrors('employeeIdCard')}" th:errors="*{employeeIdCard}"></p>
-                <input type="number" id="idCard" class="form-control" placeholder="Input id card" name="idCard"
-                       th:field="*{employeeIdCard}">
+                <label for="dateOfBirth" class="h6">Id Card:</label>
+                <div>
+                    <input type="number" id="idCard" class="form-control" placeholder="Input id card" name="idCard"
+                           th:field="*{employeeIdCard}">
+                    <p style="color: red" th:if="${#fields.hasErrors('employeeIdCard')}" th:errors="*{employeeIdCard}"></p>
+                </div>
             </div>
+
 
             <div class="mt-3 form-group">
                 <label for="salary" class="h6">salary:</label>
+
+                <div>
+                    <input type="number" id="salary" class="form-control" placeholder="Input salary..." name="salary"
+                           th:field="*{salary}">
+                </div>
                 <p style="color: red" th:if="${#fields.hasErrors('salary')}" th:errors="*{salary}"></p>
-                <input type="number" id="salary" class="form-control" placeholder="Input salary..." name="salary"
-                       th:field="*{salary}">
+
             </div>
 
             <div class="mt-3 form-group">
                 <label for="phone" class="h6">Phone:</label>
+
+                <div>
+                    <input type="text" id="phone" class="form-control" placeholder="Input phone..." name="phone"
+                           th:field="*{employeePhone}">
+                </div>
+
                 <p style="color: red" th:if="${#fields.hasErrors('employeePhone')}" th:errors="*{employeePhone}"></p>
-                <input type="text" id="phone" class="form-control" placeholder="Input phone..." name="phone"
-                       th:field="*{employeePhone}">
+
             </div>
 
             <div class="mt-3 form-group">
                 <label for="email" class="h6">Email:</label>
+
+                <div>
+                    <input type="text" id="email" class="form-control" placeholder="Input Email..." name="email"
+                           th:field="*{employeeEmail}">
+                </div>
+
                 <p style="color: red" th:if="${#fields.hasErrors('employeeEmail')}" th:errors="*{employeeEmail}"></p>
-                <input type="text" id="email" class="form-control" placeholder="Input Email..." name="email"
-                       th:field="*{employeeEmail}">
+
             </div>
 
             <div class="mt-3 form-group">
                 <label for="address" class="h6">Address:</label>
+
+                <div>
+                    <input type="text" id="address" class="form-control" placeholder="Input address..." name="address"
+                           th:field="*{employeeAddress}">
+                </div>
                 <p style="color: red" th:if="${#fields.hasErrors('employeeAddress')}" th:errors="*{employeeAddress}"></p>
-                <input type="text" id="address" class="form-control" placeholder="Input address..." name="address"
-                       th:field="*{employeeAddress}">
+
             </div>
 
             <div class="mt-3 form-group">

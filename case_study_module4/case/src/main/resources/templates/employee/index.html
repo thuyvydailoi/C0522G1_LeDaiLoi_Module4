@@ -12,83 +12,68 @@
 <div th:replace="~{/home::header}"></div>
 <div class="p-3">
     <h2 class="text-center fw-bold text-dark my-3">EMPLOYEE LIST</h2>
-        <div th:if="${mess}">
-            <div class="justify-content-center d-flex">
-                <div class="alert alert-success alert-dismissible fade show w-50 text-center">
-                    <strong th:text="${mess}"></strong>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                </div>
+    <div th:if="${mess}">
+        <div class="justify-content-center d-flex">
+            <div class="alert alert-success alert-dismissible fade show w-50 text-center">
+                <strong th:text="${mess}"></strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             </div>
-</div>
-
-<nav class="navbar navbar-expand-lg py-0 my-0">
-    <div class="container-fluid">
-        <a th:href="@{/employee/create}">
-            <button class="btn btn-primary btn-outline-secondary btn-sm">
-                <span class="fa-solid fa-person-circle-plus text-light h5 my-auto me-1"></span>
-                <span class="text-light">ADD NEW EMPLOYEE</span>
-            </button>
-        </a>
-
-        <form class="d-flex my-2" role="search" action="/employee/list">
-            <input class="form-control me-2" type="text" placeholder="Input name" aria-label="Search"
-                   name="nameSearch">
-
-            <input class="form-control me-2" type="text" placeholder="Input address" aria-label="Search"
-                   name="addressSearch">
-
-            <input class="form-control me-2" type="text" placeholder="Input phone number.." aria-label="Search"
-                   name="phoneSearch">
-            <button class="btn btn-light btn-outline-primary" type="submit" name="action" value="search">
-                <i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
+        </div>
     </div>
-</nav>
-<table class="table table-light table-striped table-bordered">
-    <tr class="table-dark text-light">
-        <th class="text-center"><i class="fa-solid fa-dog"></i></th>
-        <th>Employee Name</th>
-        <th>Date Of Birth</th>
-        <th>Id Card</th>
-        <th>Education</th>
-        <th>Position</th>
-        <th>Division</th>
-        <th class="text-center">View</th>
-        <th class="text-center">Edit</th>
-        <th class="text-center">Delete</th>
-    </tr>
 
-    <tr th:each="employee, status : ${employeeList}">
-                    <td class="text-center" th:text="${status.count + employeeList.number * 5}"></td>
+    <nav class="navbar navbar-expand-lg py-0 my-0">
+        <div class="container-fluid">
+            <a th:href="@{/employee/create}">
+                <button class="btn btn-primary btn-outline-secondary btn-sm">
+                    <span class="fa-solid fa-person-circle-plus text-light h5 my-auto me-1"></span>
+                    <span class="text-light">ADD NEW EMPLOYEE</span>
+                </button>
+            </a>
 
-        <td th:text="${employee.employeeName}"></td>
+            <form class="d-flex my-2" role="search" action="/employee/list">
+                <input class="form-control me-2" type="text" placeholder="Input name" aria-label="Search"
+                       name="nameSearch">
 
-        <td th:text="${employee.employeeBirthday}"></td>
+                <input class="form-control me-2" type="text" placeholder="Input address" aria-label="Search"
+                       name="addressSearch">
+
+                <input class="form-control me-2" type="text" placeholder="Input phone number.." aria-label="Search"
+                       name="phoneSearch">
+                <button class="btn btn-light btn-outline-primary" type="submit" name="action" value="search">
+                    <i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+    </nav>
+    <table class="table table-light table-striped table-bordered">
+        <tr class="table-dark text-light">
+            <th class="text-center"><i class="fa-solid fa-dog"></i></th>
+            <th>Employee Name</th>
+            <th>Date Of Birth</th>
+            <th>Id Card</th>
+            <th>Education</th>
+            <th>Position</th>
+            <th>Division</th>
+            <th class="text-center">View</th>
+            <th class="text-center">Edit</th>
+            <th class="text-center">Delete</th>
+        </tr>
+
+        <tr th:each="employee, status : ${employeeList}">
+            <td class="text-center" th:text="${status.count + employeeList.number * 5}"></td>
+
+            <td th:text="${employee.employeeName}"></td>
+
+            <td th:text="${employee.employeeBirthday}"></td>
 
 
-        <td th:text="${employee.employeeIdCard}"></td>
+            <td th:text="${employee.employeeIdCard}"></td>
 
-        <td th:text="${employee.educationDegree.educationName}"></td>
+            <td th:text="${employee.educationDegree.educationName}"></td>
 
-        <td th:text="${employee.position.positionName}"></td>
-        <td th:text="${employee.division.divisionName}"></td>
-
-        <td class="text-center">
-<!--            <button th:attr="onclick=|viewEmployee('${employee.employeeName}',-->
-<!--                  '${employee.employeeBirthday}',-->
-<!--                  '${employee.employeeIdCard}',-->
-<!--                  '${employee.employeePhone}',-->
-<!--                  '${employee.employeeEmail}',-->
-<!--                  '${employee.employeeAddress}',-->
-<!--                  '${employee.educationDegree.educationName}'-->
-<!--                  '${employee.position.positionName}',-->
-<!--                  '${employee.division.divisionName}')|"-->
-<!--                    class="btn btn-warning btn-outline-secondary btn-sm" data-bs-toggle="modal"-->
-<!--                    data-bs-target="#viewEmployee">-->
-<!--                <span class="fa-solid fa-user text-light h6 m-auto px-2"></span>-->
-<!--            </button>-->
-        <td class="text-center">
-            <button th:attr="onclick=|viewEmployee('${employee.employeeName}',
+            <td th:text="${employee.position.positionName}"></td>
+            <td th:text="${employee.division.divisionName}"></td>
+            <td>
+                <button th:attr="onclick=|viewEmployee('${employee.employeeName}',
                   '${employee.employeeBirthday}',
                   '${employee.employeeIdCard}',
                   '${employee.employeePhone}',
@@ -97,48 +82,49 @@
                   '${employee.educationDegree.educationName}',
                   '${employee.position.positionName}',
                   '${employee.division.divisionName}')|"
-                    class="btn btn-danger btn-outline-secondary btn-sm" data-bs-toggle="modal"
-                    data-bs-target="#viewEmployee">
-                <span class="fa-solid fa-person-circle-minus text-light h6 m-auto px-2"></span>
-            </button>
-        </td>
-
-        <td class="text-center">
-            <a th:href="@{/employee/update/__${employee.employeeId}__}">
-                <button class="btn btn-success btn-outline-secondary btn-sm">
-                    <span class="fa-solid fa-user-pen text-light h6 m-auto px-2"></span>
+                        class="btn btn-warning btn-outline-secondary btn-sm" data-bs-toggle="modal"
+                        data-bs-target="#viewEmployee">
+                    <span class="fa-solid fa-person-circle-minus text-light h6 m-auto px-2"></span>
                 </button>
-            </a>
-        </td>
+            </td>
 
-        <td class="text-center">
-            <button th:attr="onclick=|deleteEmployee('${employee.employeeId}', '${employee.employeeName}')|"
-                    class="btn btn-danger btn-outline-secondary btn-sm" data-bs-toggle="modal"
-                    data-bs-target="#deleteEmployee">
-                <span class="fa-solid fa-person-circle-minus text-light h6 m-auto px-2"></span>
-            </button>
-        </td>
+            <td class="text-center">
+                <a th:href="@{/employee/update/__${employee.employeeId}__}">
+                    <button class="btn btn-success btn-outline-secondary btn-sm">
+                        <span class="fa-solid fa-user-pen text-light h6 m-auto px-2"></span>
+                    </button>
+                </a>
+            </td>
+
+            <td class="text-center">
+                <button th:attr="onclick=|deleteEmployee('${employee.employeeId}', '${employee.employeeName}')|"
+                        class="btn btn-danger btn-outline-secondary btn-sm" data-bs-toggle="modal"
+                        data-bs-target="#deleteEmployee">
+                    <span class="fa-solid fa-person-circle-minus text-light h6 m-auto px-2"></span>
+                </button>
+            </td>
 
 
-    </tr>
-</table>
+        </tr>
+    </table>
 </div>
 
 <nav aria-label="Page navigation example">
     <ul class="pagination justify-content-center">
         <li class="page-item">
             <a class="page-link" th:href="@{'/employee/list'(page=${employeeList.number - 1}, nameSearch=${nameSearch},
-                addressSearch=${addressSearch},phoneSearch=${phoneSearch})}" th:if="${employeeList.hasPrevious()}" aria-label="Previous">
+                addressSearch=${addressSearch},phoneSearch=${phoneSearch})}" th:if="${employeeList.hasPrevious()}"
+               aria-label="Previous">
                 <span aria-hidden="true"> &laquo; Previous</span>
             </a>
         </li>
         <li class="page-item"><a class="page-link" th:text="${employeeList.number }"
                                  th:href="@{'/employee/list'(page=${employeeList.number - 1}, nameSearch=${nameSearch}, addressSearch=${addressSearch},
-                phoneSearch=${phoneSearch})}"th:if="${employeeList.hasPrevious()}" ></a></li>
+                phoneSearch=${phoneSearch})}" th:if="${employeeList.hasPrevious()}"></a></li>
         <li class="page-item"><a class="page-link" th:text="${employeeList.number + 1}"></a></li>
         <li class="page-item"><a class="page-link" th:text="${employeeList.number + 2}"
                                  th:href="@{'/employee/list'(page=${employeeList.number + 1},nameSearch=${nameSearch},addressSearch=${addressSearch},
-                phoneSearch=${phoneSearch})}" th:if="${employeeList.hasNext()}" ></a></li>
+                phoneSearch=${phoneSearch})}" th:if="${employeeList.hasNext()}"></a></li>
         <li class="page-item">
             <a class="page-link" th:href="@{'/employee/list'(page=${employeeList.number + 1},nameSearch=${nameSearch},addressSearch=${addressSearch},
                 phoneSearch=${phoneSearch})}" th:if="${employeeList.hasNext()}" aria-label="Next">
@@ -161,7 +147,7 @@
             <form th:action="@{/employee/delete}">
                 <div class="modal-body">
                     <span class="h6">Employee :</span><strong id="nameDelete" class="text-danger ps-2"></strong>
-                    <input type="hidden" name="idDelete" id="idDelete" readonly/>
+                    <input type="hidden" name="idDelete" id="idDexlete" readonly/>
                 </div>
 
                 <div class="modal-footer">
@@ -240,14 +226,12 @@
 
 <script>
     function deleteEmployee(id, name) {
-alert("1")
         document.getElementById("idDelete").value = id;
         document.getElementById("nameDelete").innerText = name;
         debugger
     }
 
     function viewEmployee(name, birthday, idCard, phone, email, address, position, division, education) {
-        alert("aaa")
         document.getElementById("name").innerText = name
         document.getElementById("birthday").innerText = birthday;
         document.getElementById("idCard").innerText = idCard;
@@ -258,7 +242,6 @@ alert("1")
         document.getElementById("division").innerText = division;
         document.getElementById("education").innerText = education;
     }
-
 
 </script>
 </body>

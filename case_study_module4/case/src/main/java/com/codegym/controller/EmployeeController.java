@@ -17,6 +17,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -43,7 +44,7 @@ public class EmployeeController {
                            @RequestParam(value = "addressSearch", defaultValue = "") String addressSearch,
                            @RequestParam(value = "phoneSearch", defaultValue = "") String phoneSearch,
                            Model model) {
-        Page<Employee> employeeList = iEmployeeService.searchEmployee(nameSearch,addressSearch,phoneSearch,pageable);
+        Page<Employee> employeeList = iEmployeeService.searchEmployee(nameSearch, addressSearch, phoneSearch, pageable);
 //        List<Position> positionList = iPositionService.findAll();
 //        List<Division> divisionList = iDivisionService.findAll();
 //        List<EducationDegree> educationDegreeList = iEducationDegreeService.findAll();
@@ -64,13 +65,13 @@ public class EmployeeController {
         List<Division> divisionList = iDivisionService.findAll();
         model.addAttribute("educationDegreeList", educationDegreeList);
         model.addAttribute("positionList", positionList);
-        model.addAttribute("divisionList",divisionList);
+        model.addAttribute("divisionList", divisionList);
         model.addAttribute("employeeDto", new EmployeeDto());
         return "employee/create";
     }
 
     @PostMapping("/save")
-    public String save(@ModelAttribute  EmployeeDto employeeDto, BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model) {
+    public String save(@ModelAttribute @Validated EmployeeDto employeeDto, BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model) {
         List<EducationDegree> educationDegreeList = iEducationDegreeService.findAll();
         List<Position> positionList = iPositionService.findAll();
         List<Division> divisionList = iDivisionService.findAll();
@@ -89,14 +90,14 @@ public class EmployeeController {
     }
 
     @PostMapping("/update")
-    public  String update(@ModelAttribute Employee employee, RedirectAttributes redirectAttributes){
+    public String update(@ModelAttribute Employee employee, RedirectAttributes redirectAttributes) {
         iEmployeeService.save(employee);
         redirectAttributes.addFlashAttribute("mess", "Update employee successfully!");
-    return "redirect:/employee/list";
+        return "redirect:/employee/list";
     }
 
     @GetMapping("/update/{id}")
-    public String edit(@PathVariable int id, Model model){
+    public String edit(@PathVariable int id, Model model) {
         List<EducationDegree> educationDegreeList = iEducationDegreeService.findAll();
         List<Position> positionList = iPositionService.findAll();
         List<Division> divisionList = iDivisionService.findAll();
@@ -106,13 +107,14 @@ public class EmployeeController {
         model.addAttribute("divisionList", divisionList);
         return "/employee/edit";
     }
-    @GetMapping("/delete/{id}")
-    public String showDelete(@PathVariable int id, Model model) {
-        model.addAttribute("employee", iEmployeeService.findById(id));
-        return "employee/index";
-    }
 
-    @GetMapping ("/delete")
+//    @GetMapping("/delete/{id}")
+//    public String showDelete(@PathVariable int id, Model model) {
+//        model.addAttribute("employee", iEmployeeService.findById(id));
+//        return "employee/index";
+//    }
+
+    @GetMapping("/delete")
     public String delete(@RequestParam(value = "idDelete") Integer id, RedirectAttributes redirect) {
         iEmployeeService.delete(id);
         redirect.addFlashAttribute("mess", "Removed customer successfully!");

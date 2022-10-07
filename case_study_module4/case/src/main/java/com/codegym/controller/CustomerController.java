@@ -62,16 +62,16 @@ public class CustomerController {
     @PostMapping("/save")
     public String save(@ModelAttribute @Validated CustomerDto customerDto, BindingResult bindingResult,
                        RedirectAttributes redirectAttributes, Model model) {
-         if (bindingResult.hasFieldErrors()) {
+        if (bindingResult.hasFieldErrors()) {
             //Kiểm tra lỗi trả về create và ngược lại
             List<CustomerType> customerTypes = iCustomerTypeService.findAll();
-            model.addAttribute("customerTypes",customerTypes);
+            model.addAttribute("customerTypes", customerTypes);
             return "customer/create";
         } else {
             Customer customer = new Customer();
             BeanUtils.copyProperties(customerDto, customer);
             iCustomerService.save(customer);
-            redirectAttributes.addFlashAttribute("mess","Add " + customer.getCustomerName() + "successfully");
+            redirectAttributes.addFlashAttribute("mess", "Add " + customer.getCustomerName() + "successfully");
             return "redirect:/customer/list";
         }
     }
@@ -80,14 +80,14 @@ public class CustomerController {
     public String edit(@PathVariable int id, Model model) {
         List<CustomerType> customerTypes = iCustomerTypeService.findAll();
         model.addAttribute("customer", iCustomerService.findById(id));
-        model.addAttribute("customerTypeList",customerTypes);
+        model.addAttribute("customerTypeList", customerTypes);
         return "customer/edit";
     }
 
     @PostMapping("/update")
     public String update(@ModelAttribute Customer customer, RedirectAttributes redirectAttributes
-                          ) {
-     iCustomerService.save(customer);
+    ) {
+        iCustomerService.save(customer);
         redirectAttributes.addFlashAttribute("mess", "Update customer successfully!");
         return "redirect:/customer/list";
     }
@@ -99,7 +99,7 @@ public class CustomerController {
         return "customer/index";
     }
 
-    @GetMapping ("/delete")
+    @GetMapping("/delete")
     public String delete(@RequestParam(value = "idDelete") Integer id, RedirectAttributes redirect) {
         iCustomerService.delete(id);
         redirect.addFlashAttribute("mess", "Removed customer successfully!");

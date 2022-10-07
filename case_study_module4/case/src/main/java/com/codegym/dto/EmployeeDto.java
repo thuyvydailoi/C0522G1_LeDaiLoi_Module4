@@ -3,15 +3,42 @@ package com.codegym.dto;
 import com.codegym.model.employee.Division;
 import com.codegym.model.employee.EducationDegree;
 import com.codegym.model.employee.Position;
+import org.springframework.validation.Errors;
+import org.springframework.validation.Validator;
 
-public class EmployeeDto {
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+
+public class EmployeeDto implements Validator {
     private Integer employeeId;
+
+    @NotBlank(message = "Name cannot be blank!")
+    @Pattern(regexp = "^(([\\p{Lu}][\\p{Ll}]{1,8})(\\s([\\p{Lu}]|[\\p{Lu}][\\p{Ll}]{1,10})){0,5})| *$",
+            message = "The customer name cannot contain numbers, and the first letter of each word must be capitalized!")
     private String employeeName;
+
+    @NotNull(message = "Birthday cannot be blank!")
     private String employeeBirthday;
-    private  String employeeIdCard;
+
+    @NotBlank(message = "Id card cannot be blank!")
+    @Pattern(regexp = "^(\\d{9}|\\d{12})| *$",
+            message = "The Id card number must be in the correct format XXXXXXXXX or XXXXXXXXXXXX (X is 0-9).")
+    private String employeeIdCard;
+
     private String salary;
+
+    @NotBlank(message = "Phone number cannot be blank!")
+    @Pattern(regexp = "^((0|[(]84[)][+])9[01]\\d{7})| *$", message =
+            "The phone number must be in the correct format 090xxxxxxx or 091xxxxxxx or (84)+90xxxxxxx or (84)+91xxxxxxx.")
     private String employeePhone;
+
+    @NotBlank(message = "Email cannot be blank!")
+    @Email(message = "email must be in the correct format!")
     private String employeeEmail;
+
+    @NotBlank(message = "Address cannot be blank!")
     private String employeeAddress;
     private boolean isDelete;
     private Division division;
@@ -112,5 +139,15 @@ public class EmployeeDto {
 
     public void setEducationDegree(EducationDegree educationDegree) {
         this.educationDegree = educationDegree;
+    }
+
+    @Override
+    public boolean supports(Class<?> clazz) {
+        return false;
+    }
+
+    @Override
+    public void validate(Object target, Errors errors) {
+        EmployeeDto employeeDto = (EmployeeDto) target;
     }
 }
