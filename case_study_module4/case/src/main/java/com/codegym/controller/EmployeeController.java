@@ -87,16 +87,41 @@ public class EmployeeController {
             return "redirect:/employee/list";
         }
     }
-    @PostMapping("/")
-    @GetMapping("/update")
-    public String update(Model model){
+
+    @PostMapping("/update")
+    public  String update(@ModelAttribute Employee employee, RedirectAttributes redirectAttributes){
+        iEmployeeService.save(employee);
+        redirectAttributes.addFlashAttribute("mess", "Update employee successfully!");
+    return "redirect:/employee/list";
+    }
+
+    @GetMapping("/update/{id}")
+    public String edit(@PathVariable int id, Model model){
         List<EducationDegree> educationDegreeList = iEducationDegreeService.findAll();
         List<Position> positionList = iPositionService.findAll();
         List<Division> divisionList = iDivisionService.findAll();
+        model.addAttribute("employee", iEmployeeService.findById(id));
         model.addAttribute("educationDegreeList", educationDegreeList);
         model.addAttribute("positionList", positionList);
         model.addAttribute("divisionList", divisionList);
-        model.addAttribute("employeeDto", new EmployeeDto());
-        return "/employee/create";
+        return "/employee/edit";
     }
+    @GetMapping("/delete/{id}")
+    public String showDelete(@PathVariable int id, Model model) {
+        model.addAttribute("employee", iEmployeeService.findById(id));
+        return "employee/index";
+    }
+
+    @GetMapping ("/delete")
+    public String delete(@RequestParam(value = "idDelete") Integer id, RedirectAttributes redirect) {
+        iEmployeeService.delete(id);
+        redirect.addFlashAttribute("mess", "Removed customer successfully!");
+        return "redirect:/employee/list";
+    }
+
+//    @GetMapping("/view")
+//    public String viewEmployee(@RequestParam int id){
+//        iEmployeeService.findById(id);
+//        return "redirect:/employee/index";
+//    }
 }

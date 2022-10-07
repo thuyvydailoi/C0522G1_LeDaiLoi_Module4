@@ -36,4 +36,14 @@ public class EmployeeService implements IEmployeeService {
     public Page<Employee> searchEmployee(String nameSearch, String addressSearch, String phoneSearch, Pageable pageable) {
         return iEmloyeeRepository.searchEmployee(nameSearch, phoneSearch, addressSearch, pageable);
     }
+
+    @Override
+    public void delete(Integer id) {
+        iEmloyeeRepository.deleteLogical(id);
+    }
+
+    @Override
+    public void update(Employee employee) {
+        iEmloyeeRepository.save(employee);
+    }
 }

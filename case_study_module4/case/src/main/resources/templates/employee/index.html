@@ -12,13 +12,13 @@
 <div th:replace="~{/home::header}"></div>
 <div class="p-3">
     <h2 class="text-center fw-bold text-dark my-3">EMPLOYEE LIST</h2>
-    <!--    <div th:if="${mess}">-->
-    <!--        <div class="justify-content-center d-flex">-->
-    <!--            <div class="alert alert-success alert-dismissible fade show w-50 text-center">-->
-    <!--                <strong th:text="${mess}"></strong>-->
-    <!--                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>-->
-    <!--            </div>-->
-    <!--        </div>-->
+        <div th:if="${mess}">
+            <div class="justify-content-center d-flex">
+                <div class="alert alert-success alert-dismissible fade show w-50 text-center">
+                    <strong th:text="${mess}"></strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            </div>
 </div>
 
 <nav class="navbar navbar-expand-lg py-0 my-0">
@@ -52,14 +52,14 @@
         <th>Id Card</th>
         <th>Education</th>
         <th>Position</th>
-        <th>Devision</th>
+        <th>Division</th>
         <th class="text-center">View</th>
         <th class="text-center">Edit</th>
         <th class="text-center">Delete</th>
     </tr>
 
     <tr th:each="employee, status : ${employeeList}">
-        <!--            <td class="text-center" th:text="${status.count + employeeList.number * 5}"></td>-->
+                    <td class="text-center" th:text="${status.count + employeeList.number * 5}"></td>
 
         <td th:text="${employee.employeeName}"></td>
 
@@ -74,69 +74,54 @@
         <td th:text="${employee.division.divisionName}"></td>
 
         <td class="text-center">
+<!--            <button th:attr="onclick=|viewEmployee('${employee.employeeName}',-->
+<!--                  '${employee.employeeBirthday}',-->
+<!--                  '${employee.employeeIdCard}',-->
+<!--                  '${employee.employeePhone}',-->
+<!--                  '${employee.employeeEmail}',-->
+<!--                  '${employee.employeeAddress}',-->
+<!--                  '${employee.educationDegree.educationName}'-->
+<!--                  '${employee.position.positionName}',-->
+<!--                  '${employee.division.divisionName}')|"-->
+<!--                    class="btn btn-warning btn-outline-secondary btn-sm" data-bs-toggle="modal"-->
+<!--                    data-bs-target="#viewEmployee">-->
+<!--                <span class="fa-solid fa-user text-light h6 m-auto px-2"></span>-->
+<!--            </button>-->
+        <td class="text-center">
             <button th:attr="onclick=|viewEmployee('${employee.employeeName}',
                   '${employee.employeeBirthday}',
                   '${employee.employeeIdCard}',
-                  '${employee.educationDegree.educationName}'
+                  '${employee.employeePhone}',
+                  '${employee.employeeEmail}',
+                  '${employee.employeeAddress}',
+                  '${employee.educationDegree.educationName}',
                   '${employee.position.positionName}',
                   '${employee.division.divisionName}')|"
-                    class="btn btn-warning btn-outline-secondary btn-sm" data-bs-toggle="modal"
-                    data-bs-target="#viewCustomer">
-                <span class="fa-solid fa-user text-light h6 m-auto px-2"></span>
+                    class="btn btn-danger btn-outline-secondary btn-sm" data-bs-toggle="modal"
+                    data-bs-target="#viewEmployee">
+                <span class="fa-solid fa-person-circle-minus text-light h6 m-auto px-2"></span>
             </button>
         </td>
 
         <td class="text-center">
-            <button class="btn btn-success btn-outline-secondary btn-sm">
-                <span class="fa-solid fa-user-pen text-light h6 m-auto px-2"></span>
-            </button>
+            <a th:href="@{/employee/update/__${employee.employeeId}__}">
+                <button class="btn btn-success btn-outline-secondary btn-sm">
+                    <span class="fa-solid fa-user-pen text-light h6 m-auto px-2"></span>
+                </button>
             </a>
         </td>
 
         <td class="text-center">
-            <button class="btn btn-danger btn-outline-secondary btn-sm" data-bs-toggle="modal">
+            <button th:attr="onclick=|deleteEmployee('${employee.employeeId}', '${employee.employeeName}')|"
+                    class="btn btn-danger btn-outline-secondary btn-sm" data-bs-toggle="modal"
+                    data-bs-target="#deleteEmployee">
                 <span class="fa-solid fa-person-circle-minus text-light h6 m-auto px-2"></span>
             </button>
         </td>
+
+
     </tr>
 </table>
-
-<!--<nav aria-label="...">-->
-<!--    <ul class="pagination">-->
-<!--        <li class="page-item">-->
-<!--            <a class="page-link" th:href="@{'/employee/list'(page=${employeeList.number - 1}, nameSearch=${nameSearch},-->
-<!--                phoneSearch=${phoneSearch}, addressSearch=${addressSearch})}" th:if="${employeeList.hasPrevious()}">-->
-<!--                &laquo;</a>-->
-<!--        </li>-->
-<!--        <li class="page-item disabled" th:unless="${employeeList.hasPrevious()}">-->
-<!--            <a class="page-link">&laquo;</a>-->
-<!--        </li>-->
-
-<!--        <li class="page-item"><a class="page-link" th:href="@{'/employee/list'(page=${employeeList.number - 1},-->
-<!--            nameSearch=${nameSearch}, phoneSearch=${phoneSearch}, addressSearch=${addressSearch})}"-->
-<!--                                 th:if="${employeeList.hasPrevious()}" th:text="${employeeList.number}"></a></li>-->
-
-<!--        <li class="page-item active">-->
-<!--            <a class="page-link" th:href="@{'/employee/list'(page=${employeeList.number}, nameSearch=${nameSearch},-->
-<!--                phoneSearch=${phoneSearch}, addressSearch=${addressSearch})}" th:text="${employeeList.number + 1}">-->
-<!--                <span class="sr-only">(Page now)</span></a>-->
-<!--        </li>-->
-
-<!--        <li class="page-item"><a class="page-link" th:href="@{'/employee/list'(page=${employeeList.number + 1},-->
-<!--            nameSearch=${nameSearch}, phoneSearch=${phoneSearch}, addressSearch=${addressSearch})}"-->
-<!--                                 th:if="${employeeList.hasNext()}" th:text="${employeeList.number + 2}"></a>-->
-<!--        </li>-->
-
-<!--        <li class="page-item">-->
-<!--            <a class="page-link" th:href="@{'/eployee/list'(page=${employeeList.number + 1}, nameSearch=${nameSearch},-->
-<!--                phoneSearch=${phoneSearch}, addressSearch=${addressSearch})}"-->
-<!--               th:if="${employeeList.hasNext()}">&raquo;</a>-->
-<!--        </li>-->
-<!--        <li class="page-item disabled" th:unless="${employeeList.hasNext()}">-->
-<!--            <a class="page-link">&raquo;</a>-->
-<!--        </li>-->
-<!--    </ul>-->
-<!--</nav>-->
 </div>
 
 <nav aria-label="Page navigation example">
@@ -164,36 +149,37 @@
 </nav>
 
 
-<!--<div class="modal fade" id="deleteEmployee" tabindex="-1" aria-labelledby="exampleModalLabel1"-->
-<!--     aria-hidden="true">-->
-<!--    <div class="modal-dialog">-->
-<!--        <div class="modal-content modalCSS">-->
-<!--            <div class="modal-header">-->
-<!--                <h4 class="modal-title" id="exampleModalLabel1">Are you sure you want to delete?</h4>-->
-<!--                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
-<!--            </div>-->
+<div class="modal fade" id="deleteEmployee" tabindex="-1" aria-labelledby="exampleModalLabel1"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content modalCSS">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel1">Are you sure you want to delete?</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
 
-<!--            <form th:action="@{/employee/delete}">-->
-<!--                <div class="modal-body">-->
-<!--                    <span class="h6">Customer :</span><strong id="nameDelete" class="text-danger ps-2"></strong>-->
-<!--                    <input type="hidden" name="idDelete" id="idDelete" readonly/>-->
-<!--                </div>-->
+            <form th:action="@{/employee/delete}">
+                <div class="modal-body">
+                    <span class="h6">Employee :</span><strong id="nameDelete" class="text-danger ps-2"></strong>
+                    <input type="hidden" name="idDelete" id="idDelete" readonly/>
+                </div>
 
-<!--                <div class="modal-footer">-->
-<!--                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
-<!--                    <button type="submit" class="btn btn-danger" value="delete">Xóa</button>-->
-<!--                </div>-->
-<!--            </form>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-danger" value="delete">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 
 <div class="modal fade" id="viewEmployee" tabindex="-1" aria-labelledby="exampleModalLabel1"
      aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content modalCSS">
             <div class="modal-header">
-                <h4 class="modal-title text-center" id="exampleModalLabel2">Infomation Employee</h4>
+                <h4 class="modal-title text-center" id="exampleModalLabel2">Information Employee</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
@@ -203,15 +189,28 @@
                         <td class="h6 pe-3">Employee Name:</td>
                         <td id="name" class="text-primary h6"></td>
                     </tr>
-
                     <tr>
-                        <td class="h6 pe-3">Date Of Birh:</td>
+                        <td class="h6 pe-3">Date Of Birth:</td>
                         <td id="birthday" class="text-primary"></td>
                     </tr>
 
                     <tr>
                         <td class="h6 pe-3">Id Card:</td>
                         <td id="idCard" class="text-primary"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="h6 pe-3">Phone:</td>
+                        <td id="phone" class="text-primary"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="h6 pe-3">Email:</td>
+                        <td id="email" class="text-primary"></td>
+                    </tr>
+                    <tr>
+                        <td class="h6 pe-3">Address:</td>
+                        <td id="address" class="text-primary"></td>
                     </tr>
 
                     <tr>
@@ -240,30 +239,27 @@
 </div>
 
 <script>
-    // function deleteCustomer(id, name)
-    //
-    // document.getElementById("idDelete").value = id;
-    // document.getElementById("nameDelete").innerText = name;
-    // debugger
+    function deleteEmployee(id, name) {
+alert("1")
+        document.getElementById("idDelete").value = id;
+        document.getElementById("nameDelete").innerText = name;
+        debugger
+    }
 
-
-    function viewCustomer(name, birthday, gender, idCard, phone, email, address, type) {
+    function viewEmployee(name, birthday, idCard, phone, email, address, position, division, education) {
+        alert("aaa")
         document.getElementById("name").innerText = name
         document.getElementById("birthday").innerText = birthday;
-        if (gender == 0) {
-
-            document.getElementById("gender").innerText = "Nam";
-        } else if (gender == 1) {
-
-            document.getElementById("gender").innerText = "Nữ";
-        }
         document.getElementById("idCard").innerText = idCard;
         document.getElementById("phone").innerText = phone;
         document.getElementById("email").innerText = email;
         document.getElementById("address").innerText = address;
-        document.getElementById("type").innerText = type;
-        debugger
+        document.getElementById("position").innerText = position;
+        document.getElementById("division").innerText = division;
+        document.getElementById("education").innerText = education;
     }
+
+
 </script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"

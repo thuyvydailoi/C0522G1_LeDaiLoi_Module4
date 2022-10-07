@@ -16,6 +16,10 @@ public interface IEmployeeService {
 
     Page<Employee> searchEmployee(String nameSearch, String addressSearch, String phoneSearch, Pageable pageable);
 
+    void delete(Integer id);
+
+    void update(Employee employee);
+
 }
 
 
