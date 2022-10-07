@@ -21,6 +21,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
+
     @Autowired
     private ICustomerService iCustomerService;
 
@@ -92,7 +93,6 @@ public class CustomerController {
         return "redirect:/customer/list";
     }
 
-
     @GetMapping("/delete/{id}")
     public String showDelete(@PathVariable int id, Model model) {
         model.addAttribute("customer", iCustomerService.findById(id));
@@ -105,7 +105,7 @@ public class CustomerController {
         redirect.addFlashAttribute("mess", "Removed customer successfully!");
         return "redirect:/customer/list";
     }
-//
+
 //    @GetMapping("/view/{id}")
 //    public String view(@PathVariable int id, Model model) {
 //        model.addAttribute("customer", iCustomerService.findById(id));

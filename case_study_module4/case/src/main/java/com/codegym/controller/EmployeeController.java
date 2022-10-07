@@ -90,9 +90,22 @@ public class EmployeeController {
     }
 
     @PostMapping("/update")
-    public String update(@ModelAttribute Employee employee, RedirectAttributes redirectAttributes) {
-        iEmployeeService.save(employee);
-        redirectAttributes.addFlashAttribute("mess", "Update employee successfully!");
+    public String update(@ModelAttribute @Validated EmployeeDto employeeDto,
+                         BindingResult bindingResult,
+                         RedirectAttributes redirectAttributes,
+                         Model model) {
+        if(bindingResult.hasFieldErrors()){
+            model.addAttribute("educationDegreeList", iEducationDegreeService.findAll());
+            model.addAttribute("positionList", iPositionService.findAll());
+            model.addAttribute("divisionList", iDivisionService.findAll());
+            return "/employee/edit";
+        } else {
+            Employee employee = new Employee();
+            BeanUtils.copyProperties(employeeDto, employee);
+            iEmployeeService.save(employee);
+            redirectAttributes.addFlashAttribute("mess", "Update employee successfully!");
+
+        }
         return "redirect:/employee/list";
     }
 
